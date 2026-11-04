@@ -1,0 +1,1 @@
+function popBadge(c, t, t0, x, y, s, kind) { if (t < t0) return; const k = step(t - t0, 3.6, 0.5); c.save(); c.globalAlpha *= clamp(k * 3); c.translate(x, y); c.rotate(lerp(-0.4, 0.08, clamp(k))); c.scale(k, k); badge(c, 0, 0, s, kind); c.restore(); }

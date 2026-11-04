@@ -1,0 +1,1 @@
+function croix(c, x, y, s, col) { c.save(); c.strokeStyle = col; c.lineWidth = s * 0.18; c.lineCap = "round"; c.beginPath(); c.moveTo(x - s / 2, y - s / 2); c.lineTo(x + s / 2, y + s / 2); c.moveTo(x + s / 2, y - s / 2); c.lineTo(x - s / 2, y + s / 2); c.stroke(); c.restore(); }

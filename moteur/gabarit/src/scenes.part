@@ -1,0 +1,34 @@
+//@@HELPERS@@
+  // Gabarit : deux scènes de démonstration à remplacer. Chaque montage garde ces noms : H, STATES, FULL, FC, finale, glitch, scene.
+  // H : instants clés en secondes, à caler sur les mots de words.js.
+  const H = { titre: 0, fenetre: TOTAL * 0.4, fin: TOTAL - 1.2 };
+
+  // États d'écran : 0 = animation en haut et carte visage en bas, 1 = visage plein écran.
+  const STATES = [[0, 0], [H.fin, 1]];
+  function FULL(t) { let v = STATES[0][1]; for (let i = 1; i < STATES.length; i++) v = lerp(v, STATES[i][1], eio((t - STATES[i][0]) / 0.55)); return v; }
+  const FC = { x: 43, y: 1140, w: 994, h: 740, r: 36 };
+
+  function sTitre(c, t) {
+    P(c, t, 0.1, 540, 420, () => { txt(c, "Ton titre ici", 0, 0, font(400, 104, TITLE), C.ink, "center"); });
+    P(c, t, 0.45, 540, 560, () => { txt(c, "un seul accent, une seule idée", 0, 0, font(700, 44, SANS), C.org, "center"); });
+  }
+  function sFenetre(c, t) {
+    const y = 140; fenetre(c, 90, y, 900, 760, "exemple.com");
+    const texte = typed("Remplace cette scène par la tienne.", t, H.fenetre + 0.3, H.fenetre + 1.6);
+    txt(c, texte, 140, y + 200, font(700, 44, SANS), C.ink);
+    lignes(c, 140, y + 280, 760, 5);
+  }
+
+  // Dessinée au-dessus du visage plein écran : carte de fin, appel à l'action.
+  function finale(c, t) {}
+  // Effet de transition optionnel, appliqué sur le monde.
+  function glitch(g, src, t) {}
+
+  function scene(c, t) {
+    c.setTransform(1, 0, 0, 1, 0, 0);
+    c.fillStyle = C.bg; c.fillRect(0, 0, 1080, 1920);
+    c.fillStyle = C.grid; for (let x = 0; x <= 1080; x += 40) c.fillRect(x, 0, 2, 1920); for (let y = 0; y <= 1920; y += 40) c.fillRect(0, y, 1080, 2);
+    if (FULL(t) > 0.999) return;
+    layer(c, t, H.titre, H.fenetre - 0.2, () => sTitre(c, t));
+    layer(c, t, H.fenetre, H.fin, () => sFenetre(c, t));
+  }

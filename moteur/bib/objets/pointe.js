@@ -1,0 +1,1 @@
+function pointe(c, x, y, a, col, s) { c.save(); c.translate(x, y); c.rotate(a); c.beginPath(); c.moveTo(s, 0); c.lineTo(-s * 0.6, -s * 0.8); c.lineTo(-s * 0.6, s * 0.8); c.closePath(); c.fillStyle = col; c.fill(); c.restore(); }

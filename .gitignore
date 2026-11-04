@@ -1,0 +1,19 @@
+# données locales de chaque créateur : jamais versionnées
+projects/
+takes/
+edits/
+captures/
+studio.config.json
+voice.md
+planning-cache.json
+stats-cache.json
+versions-vues.json
+versions-notifiees.json
+.env
+*.env
+
+# dépendances et rendus
+node_modules/
+__pycache__/
+motion-lib/rendus/
+.DS_Store

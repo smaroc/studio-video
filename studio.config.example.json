@@ -1,0 +1,27 @@
+{
+  "nom": "mon studio",
+  "prenom": "",
+  "pseudo": "@moncompte",
+  "langue": "fr",
+  "fuseau": "Europe/Paris",
+  "reseaux": ["instagram", "tiktok", "youtube"],
+  "zernio": {
+    "profil": "",
+    "comptes": {"instagram": "", "facebook": "", "tiktok": "", "youtube": ""}
+  },
+  "dm": {
+    "message": "Salut ! Voici le lien : {url}",
+    "reponseInstagram": "Envoyé en DM",
+    "variantes": ["Go dans tes DMs", "C'est envoyé"],
+    "reponseFacebook": "Envoyé en message privé",
+    "abonnementRequis": false,
+    "messageAbonnement": "Pour recevoir le lien, abonne-toi à {pseudo} puis appuie sur « Vérifier abonnement ». Le lien sera envoyé après vérification.",
+    "messageNonAbonne": "Ton abonnement à {pseudo} n'est pas confirmé. Abonne-toi, puis clique de nouveau sur « Vérifier abonnement ».",
+    "bouton": "Vérifier abonnement"
+  },
+  "piliers": [
+    {"nom": "Tutos", "couleur": "#62cdc1", "motifs": "comment|tuto|étape"},
+    {"nom": "Business", "couleur": "#e8b95a", "motifs": "client|vente|argent"}
+  ],
+  "couverture": {"fond": "#F0EDE6", "encre": "#1F1B16", "accent": "#D9643A", "gris": "#B9AFA3", "signature": "#7A6F63"}
+}

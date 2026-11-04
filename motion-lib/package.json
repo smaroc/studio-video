@@ -1,0 +1,6 @@
+{
+  "name": "motion-lib",
+  "private": true,
+  "type": "module",
+  "dependencies": { "skia-canvas": "^2.0.2" }
+}

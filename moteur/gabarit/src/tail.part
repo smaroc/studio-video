@@ -1,0 +1,65 @@
+  // ---------- sous-titres : 1 à 3 mots, encre, mot actif en accent, sans bandeau ----------
+  const GRP = (window.GROUPS || []);
+  const net = (s) => s.replace(/[.,!?;:«»]+$/, "").replace(/^[«»]+/, "");
+  const NOMS = new Set([]); // mots à mettre en italique dans les sous-titres
+  function captions(c, t) {
+    c.clearRect(0, 0, 1080, 1920); finale(c, t);
+    const full = FULL(t), moving = STATES.some(([k]) => k > 0 && t > k - 0.05 && t < k + 0.6); if (moving) return;
+    const gi = GRP.findIndex((g2, i) => t >= g2.start - 0.04 && (i + 1 >= GRP.length || t < GRP[i + 1].start - 0.04) && t < g2.end + 0.6);
+    if (gi < 0) return; const grp = GRP[gi], k = gi === 0 ? 1 : step(t - grp.start + 0.04, 3.0, 0.9);
+    const y = full > 0.5 ? 1500 : 990;
+    let sz = 62; const fnt = (w, s2) => font(800, s2, SANS, NOMS.has(net(w.w)));
+    const txts = grp.mots.map((w) => net(w.w)), gap = 18;
+    c.save(); let widths = grp.mots.map((w, i) => { c.font = fnt(w, sz); return c.measureText(txts[i]).width; }), tw = widths.reduce((s, x) => s + x, 0) + gap * (txts.length - 1);
+    if (tw > 940) { const f = 940 / tw; sz = Math.floor(sz * f); widths = widths.map((x) => x * f); tw = 940; }
+    c.globalAlpha = 1; c.translate(540, y); const sc = lerp(0.96, 1, clamp(k)); c.scale(sc, sc); c.translate(-540, -y);
+    c.textBaseline = "middle"; let x = 540 - tw / 2;
+    if (full > 0.5) { c.shadowColor = "rgba(0,0,0,0.55)"; c.shadowBlur = 22; c.shadowOffsetY = 4; }
+    grp.mots.forEach((w, i) => { const nx = i + 1 < grp.mots.length ? grp.mots[i + 1].start : grp.end + 0.08, on = t >= w.start && t < nx;
+      c.font = fnt(w, sz); c.fillStyle = on ? C.org : full > 0.5 ? "#fff" : C.ink; c.textAlign = "left"; c.fillText(txts[i], x, y + 2); x += widths[i] + gap; });
+    c.restore();
+  }
+
+  // ---------- carte visage : prise en paysage cadrée sur la tête suivie, la tête dépasse du bord haut ----------
+  const CUTS = []; // instants de coupe : un léger zoom alterne à chacun pour masquer le raccord
+  const CXR = window.CXR || [950];
+  const CXS = CXR.map((_, i) => { let s = 0, n = 0; for (let j = i - 4; j <= i + 4; j++) if (j >= 0 && j < CXR.length) { s += CXR[j]; n++; } return s / n; });
+  const cxAt = (t) => { const u = clamp(t * 2, 0, CXS.length - 1), i = Math.floor(u), f = u - i; return lerp(CXS[i], CXS[Math.min(i + 1, CXS.length - 1)], f); };
+  const face = document.getElementById("face"), cam = document.getElementById("cam"), head = document.getElementById("head"), cam2 = document.getElementById("cam2");
+  // hauteur du haut de la tête dans la prise, à ajuster pour ne pas la couper en plein écran
+  const HEADTOP = 64;
+  function faceLayout(t) { const p = eio(FULL(t));
+    let seg = 0; for (const k of CUTS) if (t >= k) seg++;
+    const z = seg % 2 ? 0.035 : 0;
+    const S = lerp(0.95 + z, 1.8, p), hy = lerp(1050, 300, p), ty0 = hy - S * HEADTOP, ty = Math.min(ty0, lerp(ty0, 0, p));
+    const tx = clamp(540 - S * cxAt(t), 1080 - S * 1920, 0);
+    const tr = `translate(${tx.toFixed(2)}px,${ty.toFixed(2)}px) scale(${S.toFixed(4)})`;
+    cam.style.transform = tr; cam2.style.transform = tr;
+    const top = lerp(FC.y, 0, p), sd = lerp(FC.x, 0, p), bot = lerp(1920 - FC.y - FC.h, 0, p), r = lerp(FC.r, 0, p);
+    face.style.clipPath = `inset(${top.toFixed(1)}px ${sd.toFixed(1)}px ${bot.toFixed(1)}px ${sd.toFixed(1)}px round ${r.toFixed(1)}px)`;
+    head.style.clipPath = `inset(0px ${FC.x}px ${(1920 - FC.y).toFixed(1)}px ${FC.x}px)`;
+    head.style.opacity = (1 - p).toFixed(3); }
+
+  const FOUETTES = []; // [début, fin] des mouvements rapides : plus de sous-images de flou
+  function render(t) {
+    faceLayout(t);
+    const fort = FOUETTES.some(([u, v]) => t > u && t < v), SUB = fort ? 10 : 4, SHUTTER = fort ? 1 / 40 : 1 / 120;
+    for (let i = 0; i < SUB; i++) { const ts = Math.max(0, t - SHUTTER * (i / (SUB - 1))); scene(o, ts);
+      a.globalAlpha = 1 / (i + 1); a.globalCompositeOperation = i === 0 ? "copy" : "source-over"; a.drawImage(off, 0, 0); }
+    a.globalAlpha = 1; a.globalCompositeOperation = "source-over";
+    g.clearRect(0, 0, 1080, 1920); g.drawImage(acc, 0, 0); glitch(g, acc, t);
+    captions(cg, t);
+  }
+  const tl = gsap.timeline({ paused: true });
+  let NOW = 0; const CLOCK = {};
+  Object.defineProperty(CLOCK, "t", { get: () => NOW, set: (v) => { NOW = v; render(v); } });
+  tl.fromTo(CLOCK, { t: 0 }, { t: TOTAL, duration: TOTAL, ease: "none" }, 0);
+  render(0);
+  if (document.fonts) document.fonts.ready.then(() => render(NOW));
+  window.addEventListener("load", () => render(NOW));
+  window.__timelines = window.__timelines || {};
+  window.__timelines["main"] = tl;
+})();
+</script>
+</body>
+</html>
