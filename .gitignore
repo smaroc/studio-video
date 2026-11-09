@@ -9,6 +9,7 @@ planning-cache.json
 stats-cache.json
 versions-vues.json
 versions-notifiees.json
+.studio/
 .env
 *.env
 

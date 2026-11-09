@@ -1,11 +1,33 @@
 ---
 name: installation-studio
-description: Installe et personnalise le studio vidéo : outils, dépendances du moteur, transcription locale, config, voix et style. À utiliser à la première ouverture du dépôt, ou quand l'utilisateur veut changer son identité, sa voix, sa charte ou son compte Zernio.
+description: Installe, met à jour et personnalise le studio vidéo : téléchargement de la dernière version, outils, dépendances du moteur, transcription locale, config, voix et style. À utiliser à la première installation, quand l'utilisateur veut mettre à jour le studio, ou changer son identité, sa voix, sa charte ou son compte Zernio.
 ---
 
 # Installation
 
-Avance une étape à la fois, à partir de la racine du dépôt. Saute ce qui est déjà en place. Ne demande jamais à l'utilisateur de coller une clé dans la conversation.
+Avance une étape à la fois, à partir de la racine du studio. Saute ce qui est déjà en place. Ne demande jamais à l'utilisateur de coller une clé d'un service tiers dans la conversation. La seule exception est sa clé d'accès au studio (étape 0), qui ne sert qu'au téléchargement.
+
+## 0. Récupérer le studio
+
+Le studio est là si le dossier courant, ou `~/studio-video`, contient `desk/server.mjs`. Dans ce cas, place-toi dedans et passe à l'étape 1.
+
+Sinon, demande la clé d'accès reçue dans le mail d'achat, puis lance :
+
+```bash
+curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash -s <clé>
+```
+
+Place-toi ensuite dans `~/studio-video` et continue. La clé est gardée sur la machine, il n'y aura plus à la donner. Si elle est refusée, demande à l'utilisateur de vérifier son mail d'achat et de contacter le support s'il ne la trouve pas.
+
+## Mettre à jour
+
+Quand l'utilisateur demande une mise à jour, lance cette ligne, sans clé :
+
+```bash
+curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash
+```
+
+La mise à jour ne touche jamais aux prises, aux projets, à `studio.config.json` ni à `voice.md`, et ne remplace aucun fichier modifié par l'utilisateur. Pour chaque fichier gardé, la version neuve est posée dans `.studio/nouveautes/` : compare les deux, propose la fusion, applique-la seulement avec son accord, puis supprime la copie. Relance `cd moteur && npm install` si `moteur/package.json` a changé, puis le serveur du studio.
 
 ## 1. Outils
 

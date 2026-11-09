@@ -16,12 +16,21 @@ L'interface est en français. Le studio n'a été testé que sur macOS : Linux d
 
 ## Démarrage
 
-Il faut Node 20 ou plus, ffmpeg, Python 3 et Chrome. Ensuite :
+Il faut Node 20 ou plus, ffmpeg, Python 3 et Chrome. Ensuite, avec la clé reçue dans ton mail d'achat :
 
 ```bash
-git clone <url du dépôt> studio-video
-cd studio-video
+curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash -s <ta clé>
 ```
+
+Ouvre `~/studio-video` dans ton agent et tape `/installation-studio` : il vérifie les outils et t'aide à créer ta voix, ton style et ta config.
+
+Pour récupérer la dernière version plus tard, sans perdre tes vidéos ni tes réglages :
+
+```bash
+curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash
+```
+
+Si tu préfères tout faire à la main, depuis `~/studio-video` :
 
 ```bash
 cd moteur && npm install && cd ..
@@ -41,8 +50,6 @@ node desk/server.mjs
 
 Ouvre http://127.0.0.1:4318. Le port se change avec la variable `PORT`.
 
-Le plus simple reste de demander à ton agent `/installation-studio` : il vérifie les outils et t'aide à créer ta voix, ton style et ta config.
-
 ## Personnaliser
 
 | quoi | où |
@@ -55,7 +62,7 @@ Le plus simple reste de demander à ton agent `/installation-studio` : il vérif
 | tes logos de couverture | `scripts/cover/logos/` |
 | le comportement de l'agent | `skills/` et `AGENTS.md` |
 
-`studio.config.json`, `voice.md` et tes vidéos sont ignorés par git : tu peux travailler sur un fork public sans les exposer.
+`studio.config.json`, `voice.md` et tes vidéos sont ignorés par git : ils restent sur ta machine, même si tu versionnes le studio dans un dépôt privé.
 
 ## Connecter Zernio
 
@@ -101,4 +108,4 @@ Le serveur écoute uniquement sur 127.0.0.1 et n'a pas d'authentification. Ne l'
 
 ## Licences
 
-Voir [LICENSE](LICENSE) pour le code, et [NOTICE.md](NOTICE.md) pour les polices, les sons et les marques.
+Le studio est vendu sous licence d'utilisation : tu peux le modifier pour ton usage et exploiter librement tes vidéos, mais pas le revendre ni le partager. Voir [LICENSE](LICENSE), et [NOTICE.md](NOTICE.md) pour les polices, les sons et les marques.

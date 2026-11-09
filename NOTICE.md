@@ -1,6 +1,6 @@
 # Éléments tiers
 
-La licence MIT du fichier `LICENSE` couvre le code. Les éléments ci-dessous gardent leur propre licence.
+La licence d'utilisation du fichier `LICENSE` couvre le Studio. Les éléments ci-dessous gardent leur propre licence.
 
 ## Polices
 
