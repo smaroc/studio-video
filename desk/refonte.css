@@ -1,0 +1,175 @@
+/* Refonte du studio, chargée en dernier. Ne touche à aucun identifiant ni à la logique.
+   Principes : une seule ambiance sur tous les écrans, une seule police, navigation et outils sur une ligne,
+   panneaux unifiés séparés par des filets, couleur réservée aux statuts, un seul bouton plein par écran. */
+
+html[data-theme=dark]{
+ --texte:#f4f1ec;--doux:#f4f1ecb5;--pale:#f4f1ec80;--filet:#ffffff1a;--filetFort:#ffffff2e;--verre:#ffffff0b;--verreFort:#ffffff17;
+ --line:#ffffff1a;--line2:#ffffff2e;--bg2:#ffffff0b;--bg3:#ffffff12;--hover:#ffffff17;
+ --plein:#f4f1ec;--surPlein:#1c1a18;--pop:#221f1d;--saisie:#ffffff0d;--fond:#141211;--mono:var(--police);
+}
+/* Variables du graphique : posées sur .stats, donc surchargées au même endroit. Plus de bleu dominant. */
+html[data-theme=dark] .stats{--s-instagram:#e2a07a;--s-facebook:#a8937d;--s-tiktok:#7fc9b4;--s-youtube:#e8b95a;--neutre:#ffffff40}
+:root{--police:"Inter Tight",Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--mono:var(--police)}
+
+/* Une seule ambiance : le fond ne change plus d'un onglet à l'autre. */
+html .ambiance i{background:radial-gradient(70% 55% at 88% -8%,#3a2e24 0,transparent 72%),linear-gradient(172deg,#1f1c1a,#141211 78%)}
+
+/* Une seule police, chiffres alignés là où ils se comparent. */
+html[data-theme] body,html[data-theme] body :not(code,pre){font-family:var(--police)!important}
+html[data-theme] :is(.formule,.reelStatut,.sujet .famille,.jourBadge,.bandeNom,.moisEntete,.projLabel,.accLabel,.hookOriginal label,.famille-story,.hookEtiq,.titreSec){text-transform:none;letter-spacing:0}
+.statsOutils{--mono:var(--police)}
+html[data-theme] :is(.statsSeg button,.reelHeure,.timecode,.statsTuile strong,.accNombre){font-variant-numeric:tabular-nums}
+
+/* En-tête : les onglets et les outils tiennent sur une ligne. */
+html[data-theme] main>header{display:flex;align-items:center;justify-content:flex-start;gap:16px;margin:0 0 20px;min-height:46px;flex-wrap:nowrap}
+.teteAncienne{display:none}
+html[data-theme] header>.workspaceTabs{flex:0 1 auto;min-width:0;margin:0}
+html[data-theme] header>div:last-child{margin-left:auto;display:flex;align-items:center;gap:8px;flex:none}
+html[data-theme] header #status{margin:0 4px 0 0;font-size:12px;color:var(--pale);white-space:nowrap}
+html[data-theme] .workspaceTabs{background:var(--verre);border:1px solid var(--filet)}
+html[data-theme] .workspaceTabs button,html[data-theme] body:is([data-ecran=script],[data-ecran=record],[data-ecran=review],[data-ecran=publication],[data-ecran=resultats]) .workspaceTabs button{height:36px;padding:0 14px;font-size:13px;font-weight:500}
+html[data-theme] .workspaceTabs button.active{background:var(--verreFort);box-shadow:none}
+html[data-theme] .tabSep{margin:0 3px;height:14px;background:var(--filet)}
+html[data-theme] :is(#themeToggle,.cloche>summary){height:36px;display:inline-flex;align-items:center;padding:0 13px;border-radius:999px;font-size:12px;background:none;border:1px solid var(--filet);color:var(--doux)}
+html[data-theme] :is(#themeToggle,.cloche>summary):hover{color:var(--texte);border-color:var(--filetFort);background:none}
+
+/* Le bandeau de production ne s'affiche plus que sur l'accueil. */
+body:not([data-ecran=accueil]) #vdBandeau{display:none}
+html[data-theme] .vdBandeau:empty{display:none}
+html[data-theme] .vdBandeau{margin:0 0 22px;padding:11px 18px;background:var(--verre);box-shadow:none}
+
+/* Panneaux : un seul niveau de surface, plus d'ombre portée ni de reflet. */
+html[data-theme] :is(.card,.publication,.resultats,.review,.recorderPanel),.vd .verre{background:var(--verre);border:1px solid var(--filet);border-radius:18px;box-shadow:none}
+html[data-theme] :is(.card,.publication,.resultats,.review,.recorderPanel){backdrop-filter:none;-webkit-backdrop-filter:none}
+
+/* Barre latérale : plus large, titres lisibles, actions au survol. */
+html[data-theme] aside{width:248px;padding:20px 12px;gap:12px;background:#00000038}
+@media(min-width:651px){html[data-theme] main{margin-left:248px;width:calc(100% - 248px);max-width:none}}
+html[data-theme] aside .libraryLabel{font-size:11px;font-weight:500;letter-spacing:0;color:var(--pale);text-transform:none;margin:0 8px}
+html[data-theme] aside .compactBtn{font-size:11px;min-height:0;height:auto}
+html[data-theme] aside #new{height:38px;border-radius:999px;background:var(--plein);border-color:transparent;color:var(--surPlein);font-weight:600}
+html[data-theme] aside #new:hover{background:#fff}
+html[data-theme] aside :is(#new,#chercher){flex:none}
+html[data-theme] aside #chercher{height:36px;border-radius:999px;background:var(--saisie);border-color:var(--filet);padding:0 14px}
+html[data-theme] #projects button:not(.archiveBtn){font-size:13px;line-height:1.3;border-radius:10px}
+html[data-theme] #projects{padding-bottom:18px;-webkit-mask-image:linear-gradient(#000 calc(100% - 22px),transparent);mask-image:linear-gradient(#000 calc(100% - 22px),transparent)}
+@media(hover:hover) and (min-width:651px){
+ html[data-theme] .projectRow{position:relative}
+ html[data-theme] .projectRow>.archiveBtn{position:absolute;top:50%;translate:0 -50%;right:4px;width:26px;height:26px;opacity:0;background:var(--pop);border-radius:8px;transition:opacity .15s}
+ html[data-theme] .projectRow>.supprBtn{right:32px}
+ html[data-theme] .projectRow:is(:hover,:focus-within)>.archiveBtn{opacity:1}
+}
+
+/* Accueil : à faire dans un seul panneau, semaine lisible en lignes. */
+.accTete h2{font-size:26px;font-weight:600;letter-spacing:-.4px}
+html[data-theme] .accGrille{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px}
+html[data-theme] .accLabel{font-size:12px;letter-spacing:0;text-transform:none;font-weight:500;color:var(--doux);margin-bottom:9px}
+html[data-theme] #accTodo{border:1px solid var(--filet);border-radius:18px;background:var(--verre);overflow:hidden}
+html[data-theme] .accTodo{margin:0;border:0;border-bottom:1px solid var(--filet);border-radius:0;background:none;padding:14px 16px}
+html[data-theme] .accTodo:last-child{border-bottom:0}
+html[data-theme] .accTodo .accTexte b{font-size:14px;font-weight:600}
+html[data-theme] .accNombre{font-size:24px;font-weight:600;letter-spacing:-.5px;color:var(--texte);width:40px}
+html[data-theme] .accTodo button{height:36px;border-radius:999px;padding:0 15px}
+html[data-theme] .accTodo:first-child button{background:var(--plein);border-color:transparent;color:var(--surPlein);font-weight:600}
+html[data-theme] .accSemaine{grid-template-columns:minmax(0,1fr);gap:0;border:1px solid var(--filet);border-radius:18px;background:var(--verre);overflow:hidden}
+html[data-theme] .accJour{flex-direction:row;align-items:center;gap:12px;min-height:44px;padding:6px 14px;border:0;border-bottom:1px solid var(--filet);border-radius:0;background:none}
+html[data-theme] .accJour:last-child{border-bottom:0}
+html[data-theme] .accJour b{flex:0 0 58px;font-size:12px;font-weight:500;color:var(--doux)}
+html[data-theme] .accJour.auj b{color:var(--texte);font-weight:600}
+html[data-theme] .accJour .suiviEtape{font-size:13px;font-weight:500;-webkit-line-clamp:1;line-height:1.3}
+html[data-theme] .accSemaine+*{margin-top:9px;font-size:12px;color:var(--pale)}
+
+/* Veille : plus de badges de couleur vive. */
+html[data-theme] .sujet .famille,html[data-theme] .famille-story,html[data-theme] .sujet .famille-story,html[data-theme] .sujet :is(.famille-reproduction,.famille-actu,.famille-repo,.famille-skill){background:var(--verreFort);color:var(--doux);font-size:11px;font-weight:500;letter-spacing:0;text-transform:none}
+
+/* Hooks */
+html[data-theme] .hooks :is(.hCarte,.hFormule){background:var(--verre);border-color:var(--filet)}
+html[data-theme] .hooks .hFormule:hover,html[data-theme] .hooks .hFormule.sel{background:var(--verreFort)}
+html[data-theme] .hooks :is(.hMeta strong,.hFormule b span){color:var(--texte)}
+html[data-theme] .hooks .hBarre.g i u{background:var(--texte)}
+html[data-theme] .hooks .hMeta .pub{background:var(--verreFort);color:var(--doux)}
+
+/* Suivi : plus de colonne teintée. */
+.vd td.teinte,.vd tr.vLigne:hover td.teinte{background:none}
+html[data-theme] .vd tr.vLigne:hover td.teinte{background:#ffffff0a}
+html[data-theme] .vd th{background:#1d1a18}
+
+/* Barre du bas : collée au bord, le texte ne passe plus dessous. */
+html[data-theme] .cycleBar{bottom:12px;border-radius:16px;border:1px solid var(--filet);background:var(--pop);box-shadow:0 12px 0 var(--fond),0 -10px 24px #00000040}
+html[data-theme] #parcours{background:var(--pop);border-color:var(--filet);backdrop-filter:none}
+
+/* Le bouton plein reste celui de l'étape suivante : copier le prompt redevient secondaire. */
+html[data-theme] #copyStart{background:none;border-color:var(--filetFort);color:var(--texte);font-weight:500}
+html[data-theme] #copyStart:hover{background:var(--hover)}
+
+/* Écran de script : colonne de hooks vide, on dit pourquoi. Titre long lisible en entier ou proprement coupé. */
+html[data-theme] .hookScore:has(>.hsTete:only-child)::after{content:"Aucun hook proposé pour ce script pour l'instant.";display:block;margin-top:14px;color:var(--pale);font-size:13px}
+html[data-theme] #title{font-size:18px;text-overflow:ellipsis}
+
+/* Publication : statut sobre, l'ambre reste réservé aux alertes. */
+html[data-theme] .pubAction{border:1px solid var(--filet);background:var(--verre)}
+
+/* Veille : pas de barre rouge décorative sur le hook. */
+html[data-theme] .hookScene{border-left:1px solid var(--filet)}
+html[data-theme] .hookScene .hookEtiq{color:var(--pale)}
+
+/* Planning : la couleur ne sert plus de décor, seule l'alerte reste marquée. */
+html[data-theme] .reel{background:var(--verre);border-color:var(--filet)}
+html[data-theme] .reel.aVenir{border-color:var(--filet);box-shadow:none}
+html[data-theme] .vIdee.prete,html[data-theme] .vIdee{background:var(--verre);border-color:var(--filet)}
+html[data-theme] .vIdee:hover{background:var(--verreFort)}
+
+/* Hooks : la ligne d'état vide ne laisse plus de trou sous le titre. */
+.hooks .hEtat:empty{display:none}
+html[data-theme] .hooks .titreSec{margin-top:0}
+
+/* Stats : six chiffres dans un seul panneau au lieu de six cartes. */
+html[data-theme] .statsTuiles{gap:0;border:1px solid var(--filet);border-radius:18px;overflow:hidden;background:var(--verre)}
+html[data-theme] .statsTuile{border:0;border-right:1px solid var(--filet);border-radius:0;background:none;box-shadow:none}
+html[data-theme] .statsTuile:last-child{border-right:0}
+html[data-theme] .statsTuile.on{background:var(--verreFort);border-color:var(--filet);outline:0}
+
+/* Hooks : formules dans un seul panneau à filets. */
+html[data-theme] .hooks :has(>.hFormule){gap:0;border:1px solid var(--filet);border-radius:18px;overflow:hidden;background:var(--verre)}
+html[data-theme] .hooks .hFormule{margin:0 -1px -1px 0;border:0;border-right:1px solid var(--filet);border-bottom:1px solid var(--filet);border-radius:0;background:none}
+
+/* Téléphone */
+@media(max-width:1180px){
+ html[data-theme] main>header{flex-wrap:wrap}
+ html[data-theme] header>.workspaceTabs{order:2;flex:1 1 100%;max-width:100%;overflow-x:auto}
+ html[data-theme] header>div:last-child{order:1}
+}
+@media(max-width:900px){html[data-theme] .accGrille{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:650px){
+ html[data-theme] aside{width:100%;padding:14px 16px}
+ html[data-theme] header>div:last-child{margin-left:0;justify-content:space-between;width:100%}
+}
+@media(pointer:coarse){html[data-theme] .workspaceTabs button,html[data-theme] :is(#themeToggle,.cloche>summary){height:44px}}
+@media(prefers-reduced-motion:reduce){.projectRow>.archiveBtn{transition:none}}
+
+/* Planning : colonnes étroites, le statut passe en texte pour ne plus être coupé. */
+html[data-theme] .reelLigne{justify-content:space-between;gap:4px}
+html[data-theme] .reelStatut,html[data-theme] .reel.large .reelStatut{background:none;padding:0;font-size:10px;font-weight:500;color:var(--pale);white-space:nowrap}
+html[data-theme] .reelStatut.publie{color:var(--doux)}
+html[data-theme] .reel.alerte .reelStatut{color:#f2b0b0}
+
+/* Téléphone : la bibliothèque devient une bande horizontale au lieu d'occuper un écran entier. */
+@media(max-width:650px){
+ html[data-theme] aside{gap:10px;padding:12px 16px 4px}
+ html[data-theme] aside :is(.libraryLabel,#archives,footer){display:none}
+ html[data-theme] aside #projects{display:flex;flex-direction:row;gap:6px;max-height:none;overflow:auto hidden;padding:0 0 8px;-webkit-mask-image:none;mask-image:none;scrollbar-width:none}
+ html[data-theme] #projects .projGroupe{display:contents}
+ html[data-theme] #projects .projLabel,html[data-theme] #projects .projectRow>.archiveBtn{display:none}
+ html[data-theme] #projects .projectRow{flex:0 0 190px;min-height:44px;display:flex;align-items:center;border:1px solid var(--filet);border-radius:12px}
+}
+
+/* Planning : colonnes étroites, on n'écrit que ce qui sort de l'ordinaire (publié, échec). À venir est déjà dit par la pastille du réseau. */
+html[data-theme] .planJour .reel:not(.large,.alerte) .reelStatut.aVenir{display:none}
+html[data-theme] .suiviPanel{border-radius:16px;overflow:hidden}
+
+/* Programmé : ambre, comme au planning (plus de bleu). */
+html[data-theme] :not(.accJour)>.suivi-programme{background:#d9a441;color:#1c1a18}
+
+
+/* Accueil sans tâche : le message respire dans son panneau. */
+html[data-theme] #accTodo>p{margin:0;padding:14px 16px}

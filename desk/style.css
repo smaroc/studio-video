@@ -819,8 +819,7 @@ summary.projLabel{cursor:pointer}
 .accueil .suiviPanel{margin-top:6px}
 @media(max-width:900px){.accGrille{grid-template-columns:1fr}.parcours button.suivant::after{display:none}}
 
-html[data-theme=light]{background:#f5f5f5;color-scheme:light;filter:invert(.96) hue-rotate(180deg)}
-html[data-theme=light] :is(img,video,canvas,picture,iframe,#stage,.funnel,.suiviEtape,.suiviReseau,.suiviDot,.parcours button::before){filter:invert(1) hue-rotate(180deg)}
+html[data-theme=light]{background:#f7f5f1;color-scheme:light}
 #themeToggle{margin-left:12px}
 body{min-height:100vh}
 /* étape résultats */

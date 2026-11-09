@@ -57,7 +57,7 @@ function courbe(hote, {x, series, empile = false, etiquette, survol, hauteur = 2
     const lbl = sv('text', {x: m.g - 8, y: py(t) + 3, 'text-anchor': 'end', class: 'axe'}); lbl.textContent = court.format(t); svg.append(lbl);
   }
   const pasX = Math.max(1, Math.ceil(x.length / Math.floor(iw / 64)));
-  x.forEach((v, i) => { if (i % pasX && i !== x.length - 1) return; const t = sv('text', {x: px(i), y: hauteur - 8, 'text-anchor': i === 0 ? 'start' : i === x.length - 1 ? 'end' : 'middle', class: 'axe'}); t.textContent = etiquette(v, i); svg.append(t); });
+  x.forEach((v, i) => { if (i !== x.length - 1 && (i % pasX || x.length - 1 - i < pasX / 2)) return; const t = sv('text', {x: px(i), y: hauteur - 8, 'text-anchor': i === 0 ? 'start' : i === x.length - 1 ? 'end' : 'middle', class: 'axe'}); t.textContent = etiquette(v, i); svg.append(t); });
   const trace = (v, base) => {
     const pts = v.map((y, i) => y == null ? null : [px(i), py(y)]);
     let d = '', ouvert = false;

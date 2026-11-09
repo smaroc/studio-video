@@ -1,0 +1,814 @@
+/* Fichier généré par outils/genere-theme-clair.mjs : ne pas modifier à la main. */
+/* style.css */
+html[data-theme=light]{color:#cfd1d6;background:#141416;--accent:#bcc2ca;--line:#24272c;--muted:#71767f}
+html[data-theme=light] button,html[data-theme=light] .fileButton{border:1px solid #2b2e33;background:#0a0a0a;color:#b0b4bd}
+html[data-theme=light] button:hover,html[data-theme=light] .fileButton:hover{background:#181a1e;border-color:#3f434b}
+html[data-theme=light] button:focus-visible,html[data-theme=light] summary:focus-visible,html[data-theme=light] input:focus-visible,html[data-theme=light] textarea:focus-visible,html[data-theme=light] select:focus-visible{outline:2px solid #5d7aa5}
+html[data-theme=light] button.accent{background:#bdc1c9;color:#0a0a0a;border-color:#bdc1c9}
+html[data-theme=light] button.accent:hover{background:#d1d4da}
+html[data-theme=light] aside{background:#191b1e;border-right:1px solid #272b31}
+html[data-theme=light] .brandmark{background:#bdc1c9;color:#0a0a0a}
+html[data-theme=light] .brandSuffix{color:#6e737c}
+html[data-theme=light] .libraryLabel{color:#62676f}
+html[data-theme=light] #new{background:transparent}
+html[data-theme=light] #projects button{border:0;background:none}
+html[data-theme=light] #projects button::before{color:#62676f}
+html[data-theme=light] #projects button.selected{background:#24272d;color:#ccd0d7}
+html[data-theme=light] footer{color:#8b929c}
+html[data-theme=light] .onlineDot{background:#487b61}
+html[data-theme=light] .footerSub{color:#61656d}
+html[data-theme=light] .breadcrumb{color:#666b73}
+html[data-theme=light] .breadcrumb span{color:#3b3f47}
+html[data-theme=light] #status{color:#68707b}
+html[data-theme=light] .workspaceTabs{border-bottom:1px solid var(--line)}
+html[data-theme=light] .workspaceTabs button{border:0;background:none;color:#6c7078}
+html[data-theme=light] .workspaceTabs button.active{color:#c9ced7}
+html[data-theme=light] .brief label{color:#666c75}
+html[data-theme=light] label{color:#767b85}
+html[data-theme=light] input,html[data-theme=light] textarea,html[data-theme=light] select{background:#0a0a0a;border:1px solid #272a30;color:#babec7}
+html[data-theme=light] textarea::placeholder,html[data-theme=light] input::placeholder{color:#565a62}
+html[data-theme=light] .card{background:#0a0a0a;border:1px solid #272a30}
+html[data-theme=light] .sectionTitle{border-bottom:1px solid #1e2023}
+html[data-theme=light] .sectionTitle span,html[data-theme=light] .muted{color:#61656d}
+html[data-theme=light] #script{border:0;background:transparent}
+html[data-theme=light] .scriptPanel .muted{border-top:1px solid #181a1d}
+html[data-theme=light] #stage{background:#dbdde1}
+html[data-theme=light] #cueText{color:#141517;background:#f5f5f533}
+html[data-theme=light] #cameraHint{color:#7d838e}
+html[data-theme=light] .transport{background:#0d0e0f;border-top:1px solid #222429}
+html[data-theme=light] .iconButton{border:1px solid transparent;background:transparent;color:#8c939e}
+html[data-theme=light] .cameraButton::before{background:currentColor}
+html[data-theme=light] .recordButton::before{background:#e17878;border:2px solid #0d0e0f}
+html[data-theme=light] .separator{background:#212529}
+html[data-theme=light] .timecode{color:#848c97}
+html[data-theme=light] .monitorFooter{color:#5d646d;border-top:1px solid #181a1e}
+html[data-theme=light] .promptSettings summary{color:#808791}
+html[data-theme=light] .settingsPopover{background:#0a0a0a;border:1px solid #272b31}
+html[data-theme=light] .reviewGrid>div:first-child{background:#1a1c20;border-right:1px solid #272b31}
+html[data-theme=light] #player{background:#dbdde1}
+html[data-theme=light] .timeline{background:#101113;border:1px solid #292d34}
+html[data-theme=light] .trackHeading{color:#5e6672}
+html[data-theme=light] input[type=range]{background:#2c323b;border:0;accent-color:#79879a}
+html[data-theme=light] input[type=range]::-webkit-slider-thumb{background:#6e7c8e;border:2px solid #0a0a0a}
+html[data-theme=light] #seek{background:repeating-linear-gradient(90deg,#292e37 0,#292e37 1px,transparent 1px,transparent 5%);border-top:2px solid #3c4552}
+html[data-theme=light] #seek::-webkit-slider-thumb{border:0;background:#c0766e}
+html[data-theme=light] #markers button{border:0;background:#9d6d54}
+html[data-theme=light] .note{border-bottom:1px solid #1a1d21}
+html[data-theme=light] .note button{color:#67707a;border:0;background:#151719}
+html[data-theme=light] .done p{text-decoration:line-through;color:#586069}
+html[data-theme=light] .help{color:#636973}
+@media(max-width:650px){html[data-theme=light] .reviewGrid>div:first-child{border-right:0}}
+html[data-theme=light] #cameraHint{background:#dbdde1f2}
+html[data-theme=light] #cameraHint strong{color:#2a2e35}
+html[data-theme=light] #captureMessage{color:#616974}
+html[data-theme=light] #cameraHint button{background:#c5c9d1;border:1px solid #a5abb7;color:#232931}
+html[data-theme=light] #cameraHint button:hover{background:#b4bac4}
+html[data-theme=light] .speechNotice{color:#636973}
+html[data-theme=light] #cueText.voiceMode .spoken{color:#636973}
+html[data-theme=light] #cueText.voiceMode .currentWord{color:#984833;background:#0a0a0a12}
+html[data-theme=light] #cue,html[data-theme=light] #stage:fullscreen #cue{border:12px solid #ecedee;background:#ecedee}
+html[data-theme=light] #cueText{color:#0a0a0a;background:transparent}
+html[data-theme=light] #cueText.voiceMode .spoken{color:#5d636a}
+html[data-theme=light] #cueText.voiceMode .currentWord{color:#a0432a;background:transparent}
+html[data-theme=light] .resume{color:#b7bcc4}
+html[data-theme=light] .score{color:#f07066!important}
+html[data-theme=light] .pourquoi{color:#a5aab4}
+html[data-theme=light] .sources a,html[data-theme=light] .signal{color:#9aa4b2;text-decoration:none}
+html[data-theme=light] .sources a:hover,html[data-theme=light] .signal:hover{color:#d1d4da}
+html[data-theme=light] .metrique{color:#61656d}
+html[data-theme=light] .hookArret{color:#8a8f97}
+html[data-theme=light] .formule{color:#61656d}
+html[data-theme=light] .hookTexte{color:#c9ced7}
+html[data-theme=light] .subHook{color:#a5aab4}
+html[data-theme=light] .scriptPreview,html[data-theme=light] .demo{color:#767b85}
+html[data-theme=light] .scriptPreview pre{color:#c0c5cc;background:#101113;border:1px solid #1e2023}
+html[data-theme=light] .aVerifier{background:#1b1111;border:1px solid #442723;color:#e2a7a1}
+html[data-theme=light] .cta{color:#767b85}
+html[data-theme=light] .signal{border-bottom:1px solid #16171a}
+html[data-theme=light] .auteur{color:#565a62}
+html[data-theme=light] .sourceChip{border:1px solid var(--line);background:#0a0a0a}
+html[data-theme=light] .sourceChip.ok::before{background:#487b61}
+html[data-theme=light] .sourceChip.ko::before{background:#e17878}
+html[data-theme=light] .planAlerte{border:1px solid}
+html[data-theme=light] .planAlerte.danger{background:#241616;border-color:#633939;color:#faaeae}
+html[data-theme=light] .planAlerte.info{background:#19160d;border-color:#332c12;color:#b2a271}
+html[data-theme=light] .planAlerte.ok{background:#101713;border-color:#1f3628;color:#8cb59e}
+html[data-theme=light] .planJour{background:#0a0a0a;border:1px solid var(--line)}
+html[data-theme=light] .planJour h3{color:#959ba4}
+html[data-theme=light] .planJour.aujourdhui{border-color:#bac0c9}
+html[data-theme=light] .planJour.passe{background:#0f1011}
+html[data-theme=light] .planVide{color:#585d65}
+html[data-theme=light] .planJour h3 strong{color:#c5c9d1}
+html[data-theme=light] .reel{border:1px solid #1f2226;background:#0a0a0a}
+html[data-theme=light] .reel.aVenir{border-color:#48330b}
+html[data-theme=light] .reel.alerte{border-color:#633939;background:#161010}
+html[data-theme=light] .reelVignette{background:#d5d8dd}
+html[data-theme=light] .reelHeure{color:#c5c9d1}
+html[data-theme=light] .reelStatut.aVenir{background:#291e0c;color:#bb9d67}
+html[data-theme=light] .reelStatut.publie{background:#152418;color:#8cb59e}
+html[data-theme=light] .reel.alerte .reelStatut{background:#442626;color:#faaeae}
+html[data-theme=light] .reelTitre{color:#a8adb5}
+html[data-theme=light] .reseau{text-decoration:none}
+html[data-theme=light] .reseauEtat{border:1.5px solid #0a0a0a;color:#0a0a0a;background:#875600}
+html[data-theme=light] .reseau.st-published .reseauEtat{background:#549971}
+html[data-theme=light] .reseau.st-failed .reseauEtat{background:#e17878}
+html[data-theme=light] .reseauNombre{background:#e17878;color:#0a0a0a}
+html[data-theme=light] .reelCorps pre{color:#a8adb5}
+html[data-theme=light] .reelCorps a{color:#97b1d7}
+html[data-theme=light] .recorderPanel{--m-bg:#e4e5e9;--m-bar:#dcdfe4;--m-line:#ced2d8;--m-txt:#1e2023;--m-dim:#6a717b;--m-rec:#ff7369;--m-ok:#008414;background:var(--m-bg);border-color:#d5d8dd;color:var(--m-txt)}
+html[data-theme=light] .recorderPanel .monitorHead{background:var(--m-bar);border-bottom:1px solid var(--m-line)}
+html[data-theme=light] .recorderPanel h2{color:var(--m-txt)}
+html[data-theme=light] .liveDot{background:#a7acb5}
+html[data-theme=light] .recorderPanel.connected .liveDot{background:var(--m-ok)}
+html[data-theme=light] .recorderPanel.isRecording .liveDot{background:var(--m-rec)}
+html[data-theme=light] .recorderPanel .monitorBadge{color:var(--m-dim)!important;border:1px solid var(--m-line)}
+html[data-theme=light] .recorderPanel.connected .monitorBadge{color:var(--m-ok)!important;border-color:#00841440;background:#00841412}
+html[data-theme=light] .monitorSpecs span{color:var(--m-dim)!important;background:#d4d7dd;border:1px solid var(--m-line)}
+html[data-theme=light] #stage{background:#edeeef}
+html[data-theme=light] #camera{background:#edeeef}
+html[data-theme=light] .frameBox{outline:1px solid #0a0a0a38}
+html[data-theme=light] .frameBox i{border:2px solid #0a0a0ad9}
+html[data-theme=light] .frameBox i:nth-child(1){border-right:0;border-bottom:0}
+html[data-theme=light] .frameBox i:nth-child(2){border-left:0;border-bottom:0}
+html[data-theme=light] .frameBox i:nth-child(3){border-right:0;border-top:0}
+html[data-theme=light] .frameBox i:nth-child(4){border-left:0;border-top:0}
+html[data-theme=light] .frameThirds{background:linear-gradient(90deg,transparent calc(33.33% - .5px),#0a0a0a1f calc(33.33% - .5px) calc(33.33% + .5px),transparent 0 calc(66.66% - .5px),#0a0a0a1f 0 calc(66.66% + .5px),transparent 0),linear-gradient(transparent calc(33.33% - .5px),#0a0a0a1f calc(33.33% - .5px) calc(33.33% + .5px),transparent 0 calc(66.66% - .5px),#0a0a0a1f 0 calc(66.66% + .5px),transparent 0)}
+html[data-theme=light] #recBadge{background:#f5f5f5b3;color:#0a0a0a}
+html[data-theme=light] #recTime{color:#0a0a0a}
+html[data-theme=light] .recDot{background:var(--m-rec)}
+html[data-theme=light] #stageChips span{background:#f5f5f5a6;color:#1e2023}
+html[data-theme=light] #cue,html[data-theme=light] #stage:fullscreen #cue{background:#f5f5f5c7;border:0}
+html[data-theme=light] #cameraHint{background:radial-gradient(ellipse at center,#d8dbe0 0,#e9eaed 70%)}
+html[data-theme=light] .hintIcon{background:#d2d5dc;border:1px solid #c4c8d1}
+html[data-theme=light] .hintIcon::before{background:#6a717b}
+html[data-theme=light] #cameraHint strong{color:#17181b}
+html[data-theme=light] #captureMessage{color:#6a717b}
+html[data-theme=light] #cameraHint button{background:#d2d5dc;border:1px solid #bcc1cb;color:#232931}
+html[data-theme=light] #cameraHint button.hintPrimary{background:#0a0a0a;border-color:#0a0a0a;color:#e4e5e9}
+html[data-theme=light] #cameraHint button.hintPrimary:hover{background:#1e2023}
+html[data-theme=light] .recorderPanel .transport{background:var(--m-bar);border-top:1px solid var(--m-line)}
+html[data-theme=light] .devicePick::before{background:var(--m-dim)}
+html[data-theme=light] .recorderPanel .deviceSelect{background:#d4d7dd url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%238a919c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;border:1px solid var(--m-line);color:var(--m-txt)}
+html[data-theme=light] .recorderPanel .deviceSelect:hover{border-color:#b5bbc5}
+html[data-theme=light] .meter{background:#cbcfd5}
+html[data-theme=light] #meterFill{background:linear-gradient(90deg,#008414 0,#008414 70%,#613b00 85%,#ff7369 100%)}
+html[data-theme=light] .recorderPanel .iconButton{color:#383d44;border:1px solid transparent}
+html[data-theme=light] .recorderPanel .iconButton:hover:not(:disabled){background:#cfd2d9;border-color:var(--m-line);color:#0a0a0a}
+html[data-theme=light] .recorderPanel .playButton.playing{background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .guideButton::before{border:1.5px solid currentColor}
+html[data-theme=light] .guideButton.on{color:#0a0a0a!important;background:#cfd2d9!important;border-color:var(--m-line)!important}
+html[data-theme=light] .recorderPanel .recordButton{background:#0a0a0a;border:0;color:#e4e5e9}
+html[data-theme=light] .recorderPanel .recordButton::before{background:var(--m-rec);border:0}
+html[data-theme=light] .recorderPanel .recordButton:hover:not(:disabled):not(.recording){background:#1b1d21}
+html[data-theme=light] .recorderPanel .recordButton.recording:hover{background:#ff837a}
+html[data-theme=light] .recorderPanel .recordButton:disabled{background:#c7cbd2;color:#878d97}
+html[data-theme=light] .recorderPanel .recordButton:disabled::before{background:#d0b3b3}
+html[data-theme=light] .recorderPanel .recordButton.recording{background:var(--m-rec);color:#0a0a0a}
+html[data-theme=light] .recorderPanel .recordButton.recording::before{background:#0a0a0a}
+html[data-theme=light] .recorderPanel .timecode{color:var(--m-dim)}
+html[data-theme=light] .recorderPanel.isRecording .timecode{color:#0a0a0a}
+html[data-theme=light] .recorderPanel .separator{background:var(--m-line)}
+html[data-theme=light] .recorderPanel .promptSettings summary{color:#383d44}
+html[data-theme=light] .recorderPanel .promptSettings summary:hover,html[data-theme=light] .recorderPanel .promptSettings[open] summary{background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .recorderPanel .settingsPopover{background:#d8dbe0;border-color:#c4c8d1;color:var(--m-txt)}
+html[data-theme=light] .recorderPanel .settingsPopover label{color:var(--m-dim)}
+html[data-theme=light] .recorderPanel .settingsPopover select{background:#cfd2d9;border-color:#bcc1cb;color:var(--m-txt)}
+html[data-theme=light] .recorderPanel .speechNotice{color:#797f8a}
+html[data-theme=light] .recorderPanel .monitorFooter{background:var(--m-bg);border-top:1px solid var(--m-line);color:var(--m-dim)}
+html[data-theme=light] #cueText .sentence.nextSentence{color:#0a0a0a73}
+html[data-theme=light] #cueText.voiceMode .sentence.nextSentence .spoken{color:inherit}
+html[data-theme=light] .recorderPanel:fullscreen{border:0}
+html[data-theme=light] .recorderPanel .fullButton.on{background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .recorderPanel .keysButton{color:#383d44}
+html[data-theme=light] .recorderPanel .keysButton[aria-expanded="true"]{background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .keysHelp{background:#e4e5e9eb;border:1px solid var(--m-line);color:var(--m-txt)}
+html[data-theme=light] .keysHead button{background:none;border:0;color:var(--m-dim)}
+html[data-theme=light] .keysHelp li{color:#383d44}
+html[data-theme=light] .keysHelp kbd{color:#0a0a0a;background:#d4d7dd;border:1px solid #c2c7ce}
+html[data-theme=light] .review{--m-bg:#e4e5e9;--m-bar:#dcdfe4;--m-line:#ced2d8;--m-txt:#1e2023;--m-dim:#6a717b;--m-coral:#fb6358;background:var(--m-bg);border-color:#d5d8dd;color:var(--m-txt)}
+html[data-theme=light] .review>.reviewHead{background:var(--m-bar);border-bottom:1px solid var(--m-line)}
+html[data-theme=light] .review h2{color:var(--m-txt)}
+html[data-theme=light] .review .liveDot{background:var(--m-coral)}
+html[data-theme=light] .review .monitorBadge{color:var(--m-dim)!important;border:1px solid var(--m-line)}
+html[data-theme=light] .review .tools button,html[data-theme=light] .review .fileButton{background:#d4d7dd;border:1px solid var(--m-line);color:#383d44}
+html[data-theme=light] .review .tools button:hover,html[data-theme=light] .review .fileButton:hover{background:#cbcfd5;color:#0a0a0a;border-color:#c2c7ce}
+html[data-theme=light] .review .tools .sendReview{background:var(--m-coral);border-color:var(--m-coral);color:#0a0a0a}
+html[data-theme=light] .review .tools .sendReview:hover{background:#ff6d61;border-color:#ff6d61}
+html[data-theme=light] .review .reviewMain{background:var(--m-bg);border-right:1px solid var(--m-line)}
+html[data-theme=light] .review .reviewSide{background:var(--m-bar)}
+html[data-theme=light] .review select{background:#d4d7dd;border:1px solid var(--m-line);color:var(--m-txt)}
+html[data-theme=light] .playerWrap{background:#edeeef;border:1px solid var(--m-line)}
+html[data-theme=light] .review #player{background:#edeeef}
+html[data-theme=light] #drawLayer{background:#edeeef}
+html[data-theme=light] .review.annotating .playerWrap{border-color:var(--m-coral)}
+html[data-theme=light] .drawTools{background:#dcdfe4f2;border:1px solid #c2c7ce}
+html[data-theme=light] .drawLabel{color:var(--m-dim)}
+html[data-theme=light] .drawLabel b{color:#0a0a0a}
+html[data-theme=light] .drawSep{background:#c2c7ce}
+html[data-theme=light] .drawTool{border:1px solid transparent;background:none;color:#383d44}
+html[data-theme=light] .drawTool:hover{background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .drawTool.on{background:#fb635826;border-color:#fb635880;color:#0a0a0a}
+html[data-theme=light] .drawTool[data-tool=circle]::before{border:2px solid currentColor}
+html[data-theme=light] .drawTool[data-tool=rect]::before{border:2px solid currentColor}
+html[data-theme=light] .drawColor{background:var(--c);border:2px solid #dcdfe4}
+html[data-theme=light] .drawAction{background:none;border:0;color:#383d44}
+html[data-theme=light] .drawAction:hover:not(:disabled){background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .drawAttach{background:var(--m-coral);border:0;color:#0a0a0a}
+html[data-theme=light] .drawAttach:hover{background:#ff6d61}
+html[data-theme=light] .drawText{background:#f5f5f5cc;border:1px solid #0a0a0a40;outline:none}
+html[data-theme=light] .shotZoom{background:#f5f5f5e0}
+html[data-theme=light] .reviewTransport{background:var(--m-bar);border:1px solid var(--m-line)}
+html[data-theme=light] .reviewTransport .timecode{color:#0a0a0a}
+html[data-theme=light] .rvBtn{border:1px solid transparent;background:none;color:#383d44}
+html[data-theme=light] .rvBtn:hover{background:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .rvPlay{background:#0a0a0a;color:#e4e5e9}
+html[data-theme=light] .rvPlay:hover{background:#1b1d21;color:#e4e5e9}
+html[data-theme=light] .captureButton{background:#fb63581f;border:1px solid #fb635866;color:#0a0a0a}
+html[data-theme=light] .captureButton::before{border:2px solid var(--m-coral)}
+html[data-theme=light] .captureButton:hover{background:#fb635833}
+html[data-theme=light] .review .timeline{background:var(--m-bar);border:1px solid var(--m-line)}
+html[data-theme=light] .review .trackHeading{color:var(--m-dim)}
+html[data-theme=light] .review #seek{background:repeating-linear-gradient(90deg,#c6cad2 0,#c6cad2 1px,transparent 1px,transparent 5%);border-top:2px solid #c2c7ce}
+html[data-theme=light] .review #seek::-webkit-slider-thumb{background:var(--m-coral)}
+html[data-theme=light] .review #markers button{background:var(--m-coral)}
+html[data-theme=light] .review .muted,html[data-theme=light] .review #position{color:var(--m-dim)}
+html[data-theme=light] .reviewKeys{color:var(--m-dim)}
+html[data-theme=light] .reviewKeys kbd{color:#0a0a0a;background:#d4d7dd;border:1px solid #c2c7ce}
+html[data-theme=light] .sideHead{color:var(--m-txt)}
+html[data-theme=light] .sideHead span{color:var(--m-dim)}
+html[data-theme=light] .sideHead b{color:#0a0a0a}
+html[data-theme=light] .notesHead{border-top:1px solid var(--m-line)}
+html[data-theme=light] .review textarea{background:#e4e5e9;border:1px solid var(--m-line);color:var(--m-txt)}
+html[data-theme=light] .review textarea:focus{border-color:#fb635880;outline:none}
+html[data-theme=light] .review #addNote{background:#0a0a0a;color:#e4e5e9;border:0}
+html[data-theme=light] .review #addNote:hover{background:#1b1d21}
+html[data-theme=light] .pendingCapture{background:#e4e5e9;border:1px solid #fb635855}
+html[data-theme=light] .pendingCapture img{background:#f5f5f5}
+html[data-theme=light] .pendingCapture div{color:var(--m-dim)}
+html[data-theme=light] .pendingCapture b{color:#0a0a0a}
+html[data-theme=light] .pendingCapture button{background:none;border:0;color:var(--m-coral)}
+html[data-theme=light] .review .note{background:#e4e5e9;border:1px solid var(--m-line)}
+html[data-theme=light] .review .note>button:first-child{background:#fb63581f;color:#0a0a0a}
+html[data-theme=light] .review .note>button:last-child{background:#d4d7dd;color:#383d44}
+html[data-theme=light] .review .note>button:last-child:hover{color:#0a0a0a;background:#cbcfd5}
+html[data-theme=light] .review .note p{color:var(--m-txt)}
+html[data-theme=light] .noteShot{background:#f5f5f5;border:1px solid var(--m-line)}
+@media(max-width:1100px){html[data-theme=light] .review .reviewMain{border-right:0}}
+html[data-theme=light] .review .note .noteCopy{background:var(--m-coral,#fb6358);color:#0a0a0a}
+html[data-theme=light] .projectRow.selected{background:#24272d}
+html[data-theme=light] .projectRow.selected>button:first-child{color:#ccd0d7}
+html[data-theme=light] #projects .archiveBtn{color:#6a717a}
+html[data-theme=light] #projects .archiveBtn::before{background:currentColor}
+html[data-theme=light] #projects .archiveBtn:hover{color:#b6bbc3;background:#2b2f36}
+html[data-theme=light] #projects button.selected{background:none}
+html[data-theme=light] #archives{color:#777e87}
+html[data-theme=light] #archivesList button{border:0;background:none;color:#777e87}
+html[data-theme=light] #archivesList button:hover{background:#24272d;color:#ccd0d7}
+html[data-theme=light] #archivesList button::after{color:#575b62}
+html[data-theme=light] .planning{--pub:#549971;--pubdoux:#121e16;--prog:#9c670b;--progdoux:#241a08;--ko:#e17878;--kodoux:#2f1c1c;--encre:#d2d5db}
+html[data-theme=light] .vueSwitch{background:#1e2023}
+html[data-theme=light] .vueSwitch button{border:0;background:transparent;color:#91969f}
+html[data-theme=light] .vueSwitch button:hover{color:var(--encre)}
+html[data-theme=light] .vueSwitch button.on{background:#0a0a0a;color:var(--encre)}
+html[data-theme=light] .planning #planningSemaine{color:var(--encre)}
+html[data-theme=light] .planJour h3:hover strong{text-decoration:underline}
+html[data-theme=light] .planStat{background:#0a0a0a;border:1px solid var(--line)}
+html[data-theme=light] .planStat strong{color:var(--encre)}
+html[data-theme=light] .planStat span{color:var(--muted)}
+html[data-theme=light] .planStat.publie strong{color:var(--pub)}
+html[data-theme=light] .planStat.aVenir strong{color:var(--prog)}
+html[data-theme=light] .planStat.echec{background:var(--koDoux);border-color:#553131}
+html[data-theme=light] .planStat.echec strong{color:var(--ko)}
+html[data-theme=light] .jourTete{background:linear-gradient(135deg,#0a0a0a 0%,#101113 100%);border:1px solid var(--line)}
+html[data-theme=light] .estAujourdhui .jourTete{background:linear-gradient(135deg,#cfd2d9 0%,#bac0c9 100%);border-color:#cfd2d9;color:#0a0a0a}
+html[data-theme=light] .estAujourdhui .jourTete .planStat{background:#0a0a0a12;border-color:#0a0a0a1f}
+html[data-theme=light] .estAujourdhui .jourTete .planStat strong{color:#0a0a0a}
+html[data-theme=light] .estAujourdhui .jourTete .planStat.publie strong{color:#17542e}
+html[data-theme=light] .estAujourdhui .jourTete .planStat.aVenir strong{color:#633b00}
+html[data-theme=light] .estAujourdhui .jourTete .planStat span{color:#0a0a0aa6}
+html[data-theme=light] .jourMois{color:var(--muted)}
+html[data-theme=light] .estAujourdhui .jourMois{color:#0a0a0aa6}
+html[data-theme=light] .jourBadge{background:#633b00;color:#dacaa9}
+html[data-theme=light] .bandeJour{border:1px solid var(--line);background:#0a0a0a}
+html[data-theme=light] .bandeJour:hover{border-color:#393d43}
+html[data-theme=light] .bandeJour.passe{background:#0f1011}
+html[data-theme=light] .bandeNom{color:var(--muted)}
+html[data-theme=light] .bandeJour strong{color:var(--encre)}
+html[data-theme=light] .bandeJour.auj strong{color:var(--prog)}
+html[data-theme=light] .bandeJour.on{background:var(--encre);border-color:var(--encre)}
+html[data-theme=light] .bandeJour.on strong,html[data-theme=light] .bandeJour.on .bandeNom{color:#0a0a0a}
+html[data-theme=light] .bandePoints i,html[data-theme=light] .moisLegende i,html[data-theme=light] .moisReel i{background:var(--prog)}
+html[data-theme=light] .bandePoints i.publie,html[data-theme=light] .moisLegende i.publie,html[data-theme=light] .moisReel.publie i{background:var(--pub)}
+html[data-theme=light] .bandePoints i.echec,html[data-theme=light] .moisLegende i.echec,html[data-theme=light] .moisReel.echec i{background:var(--ko)}
+html[data-theme=light] .bandePoints i.vide{background:transparent}
+html[data-theme=light] .jourFrise{background:#0a0a0a;border:1px solid var(--line)}
+html[data-theme=light] .heureLigne{border-top:1px dashed #181a1d}
+html[data-theme=light] .heureLigne:first-child{border-top:0}
+html[data-theme=light] .heureLigne.pleine{border-top-color:#202326}
+html[data-theme=light] .heureLigne.passee .heureLib{color:#3d4046}
+html[data-theme=light] .heureLib{color:#6c7179}
+html[data-theme=light] .heureLigne.pleine .heureLib{color:var(--encre)}
+html[data-theme=light] .maintenant{border-top:2px solid var(--ko)}
+html[data-theme=light] .maintenant::before{background:var(--ko)}
+html[data-theme=light] .maintenant b{background:var(--ko);color:#0a0a0a}
+html[data-theme=light] .jourVide{background:repeating-linear-gradient(135deg,#0d0e0f 0 8px,#131415 8px 16px)}
+html[data-theme=light] .jourVide strong{color:var(--encre)}
+html[data-theme=light] .jourVide span{color:var(--muted)}
+html[data-theme=light] .reel.large .reelTitre{color:var(--encre)}
+html[data-theme=light] .reel.large .reelCorps pre{background:#101113}
+html[data-theme=light] .moisTitre>strong{color:var(--encre)}
+html[data-theme=light] .moisTitre>span{color:var(--muted)}
+html[data-theme=light] .moisCouverture{color:var(--muted)}
+html[data-theme=light] .moisBarre{background:#1e2023}
+html[data-theme=light] .moisBarre i{background:linear-gradient(90deg,var(--prog),var(--pub))}
+html[data-theme=light] .moisReseaux{background:#0a0a0a;border:1px solid var(--line)}
+html[data-theme=light] .moisReseau b{color:var(--encre)}
+html[data-theme=light] .moisGrille{background:var(--line);border:1px solid var(--line)}
+html[data-theme=light] .moisEntete{background:#101113;color:var(--muted)}
+html[data-theme=light] .moisCase{background:color-mix(in srgb,var(--prog) calc(var(--n,0) * 3%),#0a0a0a)}
+html[data-theme=light] .moisCase.weekend{background:color-mix(in srgb,var(--prog) calc(var(--n,0) * 3%),#0e0e0f)}
+html[data-theme=light] .moisCase.hors{background:#111213}
+html[data-theme=light] .moisNum{color:var(--encre)}
+html[data-theme=light] .moisCase.auj .moisNum{background:var(--ko);color:#0a0a0a}
+html[data-theme=light] .moisCompte{background:var(--encre);color:#0a0a0a}
+html[data-theme=light] .moisReel{background:var(--progDoux);color:#cbb285}
+html[data-theme=light] .moisReel.publie{background:var(--pubDoux);color:#a0c1af}
+html[data-theme=light] .moisReel.echec{background:var(--koDoux);color:#faaeae}
+html[data-theme=light] .moisPlus{color:var(--muted)}
+html[data-theme=light] .moisLibre{color:#474c52;border:1px dashed #2a2e33}
+html[data-theme=light] .moisLegende{color:#959ba4}
+@media(max-width:800px){html[data-theme=light] .moisReel{background:none}}
+html[data-theme=light] .trouve{border:1px solid #1f2226;background:#0d0e0f}
+html[data-theme=light] .trouve summary{color:#b0b4bd}
+html[data-theme=light] .trouve[open] summary{border-bottom:1px solid #181a1d}
+html[data-theme=light] #trouveEtat{color:#71767f}
+html[data-theme=light] #trouveEtat.erreur{color:#ea9289}
+html[data-theme=light] #trouveResultat{border-top:1px solid #181a1d}
+html[data-theme=light] .trouveApercu{color:#babec7;background:#0a0a0a;border:1px solid #1f2226}
+html[data-theme=light]{--bg:#ececec;--bg2:#e5e5e5;--bg3:#e0e0e0;--hover:#d8d8d8;--line:#d2d2d2;--line2:#c6c6c6;--txt:#1b1b1b;--txt2:#616161;--dim:#8b8b8b;--accent:#1b1b1b;--muted:#717171;color:var(--txt);background:var(--bg)}
+html[data-theme=light] body{background:var(--bg)}
+html[data-theme=light] button,html[data-theme=light] .fileButton{border:1px solid var(--line2);background:var(--bg);color:var(--txt)}
+html[data-theme=light] button:hover,html[data-theme=light] .fileButton:hover{background:var(--hover);border-color:#b5b5b5}
+html[data-theme=light] button:focus-visible,html[data-theme=light] summary:focus-visible,html[data-theme=light] input:focus-visible,html[data-theme=light] textarea:focus-visible,html[data-theme=light] select:focus-visible{outline:2px solid #1b1b1b80}
+html[data-theme=light] button.accent{background:var(--txt);color:#ececec;border-color:var(--txt)}
+html[data-theme=light] button.accent:hover{background:#0a0a0a;border-color:#0a0a0a}
+html[data-theme=light] aside{background:var(--bg);border-right:1px solid var(--line)}
+html[data-theme=light] .brandmark{background:var(--txt);color:#ececec}
+html[data-theme=light] .libraryLabel,html[data-theme=light] .footerSub{color:var(--dim)}
+html[data-theme=light] #new{background:transparent}
+html[data-theme=light] footer{color:var(--txt2)}
+html[data-theme=light] #projects button{color:var(--txt2)}
+html[data-theme=light] #projects button:hover{background:var(--bg3);color:var(--txt)}
+html[data-theme=light] #projects button::before{color:var(--dim)}
+html[data-theme=light] .projectRow.selected{background:var(--bg3)}
+html[data-theme=light] .projectRow.selected>button:first-child{color:var(--txt)}
+html[data-theme=light] #projects .archiveBtn{color:var(--txt2)}
+html[data-theme=light] #projects .archiveBtn:hover{color:var(--txt);background:var(--hover)}
+html[data-theme=light] #archives,html[data-theme=light] #archivesList button{color:var(--txt2)}
+html[data-theme=light] #archivesList button:hover{background:var(--bg3);color:var(--txt)}
+html[data-theme=light] #archivesList button::after{color:var(--dim)}
+html[data-theme=light] .breadcrumb{color:var(--dim)}
+html[data-theme=light] .breadcrumb span{color:var(--line2)}
+html[data-theme=light] #status{color:var(--txt2)}
+html[data-theme=light] .workspaceTabs{background:var(--bg2);border:1px solid var(--line)}
+html[data-theme=light] .workspaceTabs::before{color:var(--dim);border-right:1px solid var(--line)}
+html[data-theme=light] .workspaceTabs button{border:0;border-right:1px solid var(--line);background:transparent;color:var(--txt2)}
+html[data-theme=light] .workspaceTabs button::before{color:var(--dim)}
+html[data-theme=light] .workspaceTabs button:hover{color:var(--txt);background:var(--bg3)}
+html[data-theme=light] .workspaceTabs button.active{color:var(--txt);background:var(--bg3)}
+html[data-theme=light] .workspaceTabs button.active::before{color:var(--txt2)}
+html[data-theme=light] label,html[data-theme=light] .brief label{color:var(--txt2)}
+html[data-theme=light] input,html[data-theme=light] textarea,html[data-theme=light] select{background:var(--bg);border:1px solid var(--line2);color:var(--txt)}
+html[data-theme=light] input:hover,html[data-theme=light] textarea:hover,html[data-theme=light] select:hover{border-color:#b5b5b5}
+html[data-theme=light] textarea::placeholder,html[data-theme=light] input::placeholder{color:var(--dim)}
+html[data-theme=light] .card{background:var(--bg2);border:1px solid var(--line)}
+html[data-theme=light] .sectionTitle{border-bottom-color:var(--line)}
+html[data-theme=light] .sectionTitle span,html[data-theme=light] .muted{color:var(--txt2)}
+html[data-theme=light] #script{color:var(--txt)}
+html[data-theme=light] .scriptPanel .muted{border-top-color:var(--line)}
+html[data-theme=light] .settingsPopover{background:var(--bg3);border-color:var(--line2)}
+html[data-theme=light] .note{border-bottom-color:var(--line)}
+html[data-theme=light] .note button{background:var(--bg3);color:var(--txt2)}
+html[data-theme=light] .help{color:var(--txt2)}
+html[data-theme=light] .recorderPanel,html[data-theme=light] .review{--m-bg:#ececec;--m-bar:#e5e5e5;--m-line:#d2d2d2;--m-txt:#1b1b1b;--m-dim:#717171;border-color:var(--line)}
+html[data-theme=light] .recorderPanel .deviceSelect{background-color:var(--bg3)}
+html[data-theme=light] .review .tools button,html[data-theme=light] .review .fileButton{background:var(--bg);border-color:var(--line2);color:var(--txt)}
+html[data-theme=light] .review .tools button:hover,html[data-theme=light] .review .fileButton:hover{background:var(--hover);border-color:#b5b5b5}
+html[data-theme=light] .review .tools .sendReview{background:var(--txt);border-color:var(--txt);color:#ececec}
+html[data-theme=light] .review .tools .sendReview:hover{background:#0a0a0a;border-color:#0a0a0a}
+html[data-theme=light] .review .note .noteCopy{background:var(--txt);color:#ececec}
+html[data-theme=light] .resume{color:var(--txt)}
+html[data-theme=light] .pourquoi,html[data-theme=light] .subHook,html[data-theme=light] .hookArret{color:var(--txt2)}
+html[data-theme=light] .sources a,html[data-theme=light] .signal{color:#3e3e3e}
+html[data-theme=light] .sources a:hover,html[data-theme=light] .signal:hover{color:#0a0a0a}
+html[data-theme=light] .metrique,html[data-theme=light] .formule,html[data-theme=light] .auteur{color:var(--dim)}
+html[data-theme=light] .hookTexte{color:var(--txt)}
+html[data-theme=light] .scriptPreview,html[data-theme=light] .demo{color:var(--txt2)}
+html[data-theme=light] .scriptPreview pre{color:var(--txt);background:var(--bg);border-color:var(--line)}
+html[data-theme=light] .aVerifier{background:#eddad8;border-color:#e8bcb7;color:#6b362e}
+html[data-theme=light] .cta{color:var(--txt2)}
+html[data-theme=light] .signal{border-bottom-color:var(--line)}
+html[data-theme=light] .trouve{background:var(--bg);border-color:var(--line)}
+html[data-theme=light] .trouve summary{color:var(--txt)}
+html[data-theme=light] .trouve[open] summary,html[data-theme=light] #trouveResultat{border-color:var(--line)}
+html[data-theme=light] #trouveEtat{color:var(--txt2)}
+html[data-theme=light] .trouveApercu{background:var(--bg2);border-color:var(--line);color:var(--txt)}
+html[data-theme=light] .planning{--pubdoux:#bbd7c7;--progdoux:#dacfb9;--kodoux:#f4d2d2;--encre:#1b1b1b}
+html[data-theme=light] .sourceChip{background:var(--bg2);border-color:var(--line);color:var(--txt2)}
+html[data-theme=light] .planAlerte.danger{background:#efdada;border-color:#edbdbd;color:#763939}
+html[data-theme=light] .planAlerte.info{background:#dcd5c4;border-color:#bfb089;color:#483100}
+html[data-theme=light] .planAlerte.ok{background:#c8dcd1;border-color:#92bfa8;color:#0f4725}
+html[data-theme=light] .planJour{background:var(--bg2);border-color:var(--line)}
+html[data-theme=light] .planJour.aujourdhui{border-color:var(--txt)}
+html[data-theme=light] .planJour.passe{background:var(--bg)}
+html[data-theme=light] .planJour h3{color:var(--txt2)}
+html[data-theme=light] .planJour h3 strong{color:var(--txt)}
+html[data-theme=light] .planVide{color:var(--dim)}
+html[data-theme=light] .reel{background:var(--bg);border-color:var(--line)}
+html[data-theme=light] .reel.aVenir{border-color:#bfb089}
+html[data-theme=light] .reel.alerte{border-color:#edbdbd;background:#eee2e2}
+html[data-theme=light] .reelHeure{color:var(--txt)}
+html[data-theme=light] .reelStatut.aVenir{background:#d8cbb0;color:#633b00}
+html[data-theme=light] .reelStatut.publie{background:#bbd7c7;color:#17542e}
+html[data-theme=light] .reel.alerte .reelStatut{background:#f4d2d2;color:#763939}
+html[data-theme=light] .reelTitre,html[data-theme=light] .reelCorps pre{color:var(--txt2)}
+html[data-theme=light] .reelCorps a{color:#2c5ba2}
+html[data-theme=light] .reseauEtat{border-color:var(--bg)}
+html[data-theme=light] .vueSwitch{background:var(--bg2);border:1px solid var(--line)}
+html[data-theme=light] .vueSwitch button{color:var(--txt2)}
+html[data-theme=light] .vueSwitch button.on{background:var(--txt);color:#ececec}
+html[data-theme=light] .planStat{background:var(--bg2);border-color:var(--line)}
+html[data-theme=light] .planStat.echec{background:#efdada;border-color:#edbdbd}
+html[data-theme=light] .jourTete,html[data-theme=light] .estAujourdhui .jourTete{background:var(--bg2);border-color:var(--line);color:var(--txt)}
+html[data-theme=light] .estAujourdhui .jourTete{border-color:var(--line2)}
+html[data-theme=light] .estAujourdhui .jourTete .planStat{background:var(--bg);border-color:var(--line)}
+html[data-theme=light] .estAujourdhui .jourTete .planStat strong{color:var(--txt)}
+html[data-theme=light] .bandeJour{background:var(--bg2);border-color:var(--line)}
+html[data-theme=light] .bandeJour:hover{border-color:#b5b5b5}
+html[data-theme=light] .bandeJour.passe{background:var(--bg)}
+html[data-theme=light] .bandeJour.on{background:var(--txt);border-color:var(--txt)}
+html[data-theme=light] .bandeJour.on strong,html[data-theme=light] .bandeJour.on .bandeNom{color:#ececec}
+html[data-theme=light] .jourFrise{background:var(--bg2);border-color:var(--line)}
+html[data-theme=light] .heureLigne{border-top-color:#d8d8d8}
+html[data-theme=light] .heureLigne.pleine{border-top-color:var(--line)}
+html[data-theme=light] .heureLigne.passee .heureLib{color:#b1b1b1}
+html[data-theme=light] .heureLib{color:var(--dim)}
+html[data-theme=light] .jourVide{background:repeating-linear-gradient(135deg,#e7e7e7 0 8px,#e2e2e2 8px 16px)}
+html[data-theme=light] .reel.large .reelCorps pre{background:var(--bg2)}
+html[data-theme=light] .moisBarre{background:var(--line)}
+html[data-theme=light] .moisReseaux{background:var(--bg2);border-color:var(--line)}
+html[data-theme=light] .moisEntete{background:var(--bg2)}
+html[data-theme=light] .moisCase{background:color-mix(in srgb,var(--prog) calc(var(--n,0) * 4%),#ececec)}
+html[data-theme=light] .moisCase.weekend{background:color-mix(in srgb,var(--prog) calc(var(--n,0) * 4%),#e8e8e8)}
+html[data-theme=light] .moisCase.hors{background:#eeeeee}
+html[data-theme=light] .moisCompte{color:#ececec}
+html[data-theme=light] .moisReel{color:#633b00}
+html[data-theme=light] .moisReel.publie{color:#17542e}
+html[data-theme=light] .moisReel.echec{color:#763939}
+html[data-theme=light] .moisLibre{color:var(--dim);border-color:var(--line2)}
+html[data-theme=light] .moisLegende{color:var(--txt2)}
+html[data-theme=light] .planDialog{background:var(--bg2);color:var(--txt);border:1px solid var(--line2)}
+html[data-theme=light] .planDialog::backdrop{background:#f5f5f5b3}
+html[data-theme=light] .pdHead{border-bottom:1px solid var(--line)}
+html[data-theme=light] .pdReseaux label{border:1px solid var(--line2);color:var(--txt)}
+html[data-theme=light] .pdReseaux input{accent-color:#1b1b1b}
+html[data-theme=light] .pdReseaux label:has(input:checked){background:var(--txt);color:#ececec;border-color:var(--txt)}
+html[data-theme=light] .pdReseaux label:has(input:checked) input{accent-color:#ececec}
+html[data-theme=light] .pdInfo{background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
+html[data-theme=light] .pdInfo.warn{background:#dcd5c4;border-color:#bfb089;color:#483100}
+html[data-theme=light] .pdInfo.ko{background:#efdada;border-color:#edbdbd;color:#763939}
+html[data-theme=light] .pdInfo.ok{background:#c8dcd1;border-color:#92bfa8;color:#0f4725}
+html[data-theme=light] .pdInfo a{color:inherit}
+html[data-theme=light] .pdCover img{border:1px solid var(--line);background:#f5f5f5}
+html[data-theme=light] .pdFoot{border-top:1px solid var(--line);background:var(--bg)}
+html[data-theme=light] .pdFoot span{color:var(--txt2)}
+html[data-theme=light] #micAlert{background:#e17878f2;color:#0a0a0a}
+html[data-theme=light] .stats{--s-instagram:#438be1;--s-facebook:#ed7849;--s-tiktok:#239e73;--s-youtube:#b07100;--neutre:#b1b1b1;--surface:var(--bg2)}
+html[data-theme=light] .statsOutils{border:1px solid var(--line);background:var(--bg2)}
+html[data-theme=light] .statsGroupe{border-right:1px solid var(--line)}
+html[data-theme=light] .statsEtiq{color:var(--dim)}
+html[data-theme=light] .statsSeg{border:1px solid var(--line2)}
+html[data-theme=light] .statsSeg button{border:0;border-right:1px solid var(--line2);background:transparent;color:var(--txt2)}
+html[data-theme=light] .statsSeg button:last-child{border-right:0}
+html[data-theme=light] .statsSeg button:hover{background:var(--bg3);color:var(--txt)}
+html[data-theme=light] .statsSeg button.on{background:var(--bg3);color:var(--txt)}
+html[data-theme=light] .statsSeg sup{color:var(--dim)}
+html[data-theme=light] .statsSeg button.on sup{color:var(--txt2)}
+html[data-theme=light] .statsGroupe.dernier{border-right:0}
+html[data-theme=light] .planOutils .statsPied{border-top:0;background:none}
+html[data-theme=light] .planPeriode{color:var(--txt)}
+html[data-theme=light] .statsPied{border-top:1px solid var(--line);background:var(--bg)}
+html[data-theme=light] .statsEtat{color:var(--txt2)}
+html[data-theme=light] .statsAide{color:var(--dim)}
+html[data-theme=light] .statsVoyant{background:#299460}
+html[data-theme=light] .statsVoyant.ancien{background:#b07100}
+html[data-theme=light] .statsVoyant.panne{background:#f07471}
+html[data-theme=light] .statsVoyant.lecture{background:var(--dim)}
+html[data-theme=light] .statsRafraichir kbd{color:var(--dim);border:1px solid var(--line2)}
+@media(max-width:900px){html[data-theme=light] .statsGroupe{border-right:0;border-bottom:1px solid var(--line)}}
+html[data-theme=light] .statsAlerte{border:1px solid #c9b48b;background:#dfd6c7;color:var(--txt)}
+html[data-theme=light] .statsTuile{background:var(--bg2);border:1px solid var(--line)}
+html[data-theme=light] .statsTuile:hover{background:var(--bg3);border-color:var(--line2)}
+html[data-theme=light] .statsTuile.on{border-color:var(--txt2)}
+html[data-theme=light] .statsTuile span{color:var(--txt2)}
+html[data-theme=light] .statsTuile strong{color:var(--txt)}
+html[data-theme=light] .statsTuile em{color:var(--dim)}
+html[data-theme=light] .statsTete h2{color:var(--txt)}
+html[data-theme=light] .statsTete .muted{color:var(--dim)}
+html[data-theme=light] .statsLegende{color:var(--txt2)}
+html[data-theme=light] .statsSvg .grille{stroke:var(--line)}
+html[data-theme=light] .statsSvg .base{stroke:var(--line2)}
+html[data-theme=light] .statsSvg .axe{fill:var(--dim)}
+html[data-theme=light] .statsSvg .ligne{fill:none}
+html[data-theme=light] .statsSvg .joint{fill:none;stroke:var(--surface)}
+html[data-theme=light] .statsSvg .point{stroke:var(--surface)}
+html[data-theme=light] .statsSvg .reticule{stroke:var(--txt2)}
+html[data-theme=light] .statsBulle{background:var(--bg3);border:1px solid var(--line2)}
+html[data-theme=light] .bulleTitre{color:var(--txt2)}
+html[data-theme=light] .bulleLigne{color:var(--txt2)}
+html[data-theme=light] .bulleLigne b{color:var(--txt)}
+html[data-theme=light] .bulleLigne i.vide{background:none}
+html[data-theme=light] .bulleLigne.avant span{color:var(--txt)}
+html[data-theme=light] .statsTable th{color:var(--dim);border-bottom:1px solid var(--line)}
+html[data-theme=light] .statsTable td{border-bottom:1px solid var(--line);color:var(--txt2)}
+html[data-theme=light] .statsTable tbody tr:last-child td{border-bottom:0}
+html[data-theme=light] .statsTable td.fort{color:var(--txt)}
+html[data-theme=light] .statsTable tbody tr[tabindex]:hover td{background:var(--bg3)}
+html[data-theme=light] .statsTable tr.choisi td{background:var(--hover)}
+html[data-theme=light] .statsReel img,html[data-theme=light] .statsSansCover{background:var(--bg3);border:1px solid var(--line)}
+html[data-theme=light] .statsReel strong{color:var(--txt)}
+html[data-theme=light] .statsReel .muted{color:var(--dim)}
+html[data-theme=light] .statsDate .muted{color:var(--dim)}
+html[data-theme=light] .statsStatut{border:1px solid var(--line2);color:var(--txt2)}
+html[data-theme=light] .statsStatut.pub{border-color:#8eb89d;color:#17542e}
+html[data-theme=light] .statsStatut.prog{border-color:#c9b48b;color:#734900}
+html[data-theme=light] .statsPuce{color:var(--txt2);border:1px solid var(--line);text-decoration:none}
+html[data-theme=light] a.statsPuce:hover{border-color:var(--line2);color:var(--txt)}
+html[data-theme=light] .spark path{fill:none;stroke:var(--txt2)}
+html[data-theme=light] .statsLien{color:var(--txt2)}
+html[data-theme=light] .statsLien:hover{color:var(--txt)}
+html[data-theme=light] .funnelChip.selected{background:#1b1b1b;border-color:#1b1b1b;color:#e5e5e5}
+html[data-theme=light] .funnel{color:#0a0a0a}
+html[data-theme=light] .funnel-TOFU{background:#5da586}
+html[data-theme=light] .funnel-MOFU{background:#71a4ed}
+html[data-theme=light] .funnel-BOFU{background:#e5815c}
+html[data-theme=light] .blocTitre{color:#363636}
+html[data-theme=light] .ideesCol{background:#e5e5e5;border:1px solid #cecece;border-top:3px solid}
+html[data-theme=light] .funnelCol-TOFU{border-top-color:#5da586}
+html[data-theme=light] .funnelCol-MOFU{border-top-color:#71a4ed}
+html[data-theme=light] .funnelCol-BOFU{border-top-color:#e5815c}
+html[data-theme=light] .ideesCol h3{color:#303030}
+html[data-theme=light] .idee{border:1px solid #cecece;background:#e0e0e0;color:#1f1f1f}
+html[data-theme=light] .ideeHook{color:#161616}
+html[data-theme=light] .ideeAngle{color:#676767}
+html[data-theme=light] .ideeMeta{color:#676767}
+html[data-theme=light] .ideeMeta a{color:inherit}
+html[data-theme=light] .suiviPanel{border:1px solid #cecece;background:#e5e5e5}
+html[data-theme=light] .suiviPanel summary{color:#1b1b1b}
+html[data-theme=light] .suiviArchives{color:#676767}
+html[data-theme=light] .suiviRow{border-top:1px solid #d6d6d6}
+html[data-theme=light] .suiviTitre{border:0;background:none;color:#1b1b1b}
+html[data-theme=light] .suiviTitre:hover{background:none;text-decoration:underline}
+html[data-theme=light] .suiviInfo{color:#676767}
+html[data-theme=light] .suiviEtape,html[data-theme=light] .suiviReseau{text-decoration:none;color:#0a0a0a}
+html[data-theme=light] .suivi-tourner{background:#bfbfbf;color:#363636}
+html[data-theme=light] .suivi-monter{background:#a7abbd}
+html[data-theme=light] .suivi-oubli{background:#b76717}
+html[data-theme=light] .suivi-programme{background:#71a4ed}
+html[data-theme=light] .suivi-partiel,html[data-theme=light] .suivi-echec{background:#ff8b7f}
+html[data-theme=light] .suivi-publie{background:#5da586}
+html[data-theme=light]{background:#ececec}
+html[data-theme=light] .parcours{border:1px solid var(--line)}
+html[data-theme=light] .parcours button{border:0;border-right:1px solid var(--line);background:var(--bg2);color:var(--txt2)}
+html[data-theme=light] .parcours button:last-child{border-right:0}
+html[data-theme=light] .parcours button::before{border:1px solid var(--line2);color:var(--dim)}
+html[data-theme=light] .parcours button.fait::before{background:#5da586;border-color:#5da586;color:#0a0a0a}
+html[data-theme=light] .parcours button.suivant::after{color:#b76717;border:1px solid #b7671780}
+html[data-theme=light] .parcours button.active{background:var(--txt);color:var(--bg)}
+html[data-theme=light] .parcours button.active::before{border-color:var(--bg);color:var(--bg)}
+html[data-theme=light] .parcours button.active.fait::before{color:#0a0a0a}
+html[data-theme=light] .parcours button.active.suivant::after{color:var(--bg);border-color:var(--bg)}
+html[data-theme=light] #chercher{border:1px solid var(--line);background:var(--bg2);color:var(--txt)}
+html[data-theme=light] .projLabel{color:var(--dim)}
+html[data-theme=light] .plusMenu summary{border:1px solid var(--line2)}
+html[data-theme=light] .plusPop{background:var(--bg2);border:1px solid var(--line)}
+html[data-theme=light] .pubAction{border:1px dashed #b76717}
+html[data-theme=light] .pubMsg{color:var(--txt)}
+html[data-theme=light] .pubLigne{border-bottom:1px solid var(--line)}
+html[data-theme=light] .pubLigne a{color:var(--txt2)}
+html[data-theme=light] .accLabel{color:var(--dim)}
+html[data-theme=light] .accTodo{border:1px solid var(--line);background:var(--bg2)}
+html[data-theme=light] .acc-oubli{color:#b76717}
+html[data-theme=light] .acc-echec{color:#f07166}
+html[data-theme=light] .acc-programme{color:#4b7bc5}
+html[data-theme=light] .acc-monter,html[data-theme=light] .acc-tourner{color:var(--txt)}
+html[data-theme=light] .accJour{background:var(--bg2);border:1px solid var(--line)}
+html[data-theme=light] .accJour.auj{border-color:var(--txt2)}
+html[data-theme=light] .accJour b{color:var(--txt2)}
+html[data-theme=light] .accJour .suiviEtape{border:0}
+html[data-theme=light][data-theme]{background:#f7f5f1}
+html[data-theme=light] .resTuile{border:1px solid var(--line)}
+html[data-theme=light] .resTuile b{color:var(--txt)}
+html[data-theme=light] .accPuce{border:0}
+html[data-theme=light] .accGlisse .accCible{outline:1px dashed var(--txt2)}
+html[data-theme=light] .accCible.survol{background:var(--hover)}
+html[data-theme=light] .compactBtn{border:0;background:none;color:var(--dim)}
+html[data-theme=light] .compactBtn:hover{color:var(--txt)}
+html[data-theme=light] .resCourbe{border:1px solid var(--line)}
+html[data-theme=light] .resGraphe .axe{stroke:var(--line2)}
+html[data-theme=light] .resGraphe .graduation{fill:var(--dim)}
+html[data-theme=light] .resGraphe path{fill:none}
+html[data-theme=light] .resGraphe path.moi{stroke:#5da586}
+html[data-theme=light] .resGraphe circle.moi{fill:#5da586}
+html[data-theme=light] .resGraphe path.mediane{stroke:var(--dim)}
+html[data-theme=light] .projVues{color:var(--dim)}
+html[data-theme=light] .projVues.fort{color:#5da586}
+html[data-theme=light] .projVues.faible{color:#ff8b7f}
+html[data-theme=light] .accPris{color:var(--dim)}
+html[data-theme=light] .acc-publie{color:#2a8a60}
+html[data-theme=light] .cloche>summary{border:1px solid var(--line);color:var(--txt2)}
+html[data-theme=light] .cloche.active>summary{color:var(--txt);border-color:#b76717}
+html[data-theme=light] .cloche>summary b{background:#b76717;color:#0a0a0a}
+html[data-theme=light] .clochePop{background:var(--bg);border:1px solid var(--line)}
+html[data-theme=light] .clocheTete button,html[data-theme=light] #clocheMac{background:none;border:0;color:var(--dim)}
+html[data-theme=light] .clocheTete button:hover,html[data-theme=light] #clocheMac:hover{color:var(--txt)}
+html[data-theme=light] .clocheItem{background:none;border:1px solid var(--line2);color:var(--txt)}
+html[data-theme=light] .clocheItem:hover{background:var(--hover)}
+html[data-theme=light] .clocheItem small{color:var(--dim)}
+html[data-theme=light] .nouvelleVersion>button::after{background:#b76717}
+html[data-theme=light] #projects .supprBtn:hover{color:#ff7479}
+html[data-theme=light] .hookOriginal{border:2px solid #f07066;background:var(--bg3)}
+html[data-theme=light] .hookOriginal label{color:#f07066}
+html[data-theme=light] .hookOriginalTexte{color:var(--txt)}
+html[data-theme=light] .hookOriginal a{color:#f07066}
+html[data-theme=light] .suivi-valide{background:#008414}
+html[data-theme=light] #projects .montageValide>button:not(.archiveBtn){color:#008414}
+html[data-theme=light][data-theme] #projects .montageValide>button:not(.archiveBtn){color:#1f8a3c}
+html[data-theme=light] .review .tools .valideBtn.fait,html[data-theme=light] .review .tools .valideBtn.fait:hover{background:#008414;border-color:#008414;color:#c1e1ca}
+html[data-theme=light][data-theme] .review .tools .valideBtn.fait,html[data-theme=light][data-theme] .review .tools .valideBtn.fait:hover{background:#1f8a3c;border-color:#1f8a3c;color:#fff}
+html[data-theme=light] .clocheVoir{background:none;border:0;color:var(--txt)}
+html[data-theme=light] .clocheVoir small{color:var(--dim)}
+html[data-theme=light] .clocheOk,html[data-theme=light] .versionConfirmer{background:#b76717;color:#0a0a0a;border:0}
+html[data-theme=light] .clocheNote{color:var(--dim)}
+html[data-theme=light] .versionBandeau{border:1px solid #b76717;background:#1c1207;color:#d2d5db}
+html[data-theme=light] .versionPastille{background:#b76717;color:#0a0a0a}
+html[data-theme=light] .versionTexte{color:#d2d5db}
+html[data-theme=light] .hookScene{background:var(--bg);border:1px solid var(--line);border-left:3px solid #f07066}
+html[data-theme=light] .hookEtiq{color:#f07066}
+html[data-theme=light] .hookGrand{color:var(--txt)}
+html[data-theme=light] .hookScene .hookArret{color:var(--txt2)}
+html[data-theme=light] .hookOption{background:transparent;border:1px solid transparent}
+html[data-theme=light] .hookOption:hover{background:var(--bg3);border-color:var(--line)}
+html[data-theme=light] .hookOption.selected{background:var(--bg3);border-color:var(--line2)}
+html[data-theme=light] .hookOption .hookTexte{color:var(--txt2)}
+html[data-theme=light] .hookOption.selected .hookTexte{color:var(--txt)}
+html[data-theme=light] .hookSource{color:var(--dim)}
+html[data-theme=light] .hookSourceTexte{color:var(--txt2)}
+html[data-theme=light] .hookSource a{color:var(--txt2)}
+html[data-theme=light] #stage #cue.list{scrollbar-color:#0a0a0a30 transparent}
+html[data-theme=light] #cue.list #cueText .sentence{border-left:3px solid transparent;color:#0a0a0a70}
+html[data-theme=light] #cue.list #cueText .sentence.pastSentence{color:#0a0a0a38}
+html[data-theme=light] #cue.list #cueText .sentence.currentSentence{color:#0a0a0a;border-left-color:#a0432a}
+html[data-theme=light] #cue.list #cueText.voiceMode .sentence:not(.currentSentence) .spoken{color:inherit}
+html[data-theme=light] .cancelRec{border-color:#e1787866;color:#b75f5f;background:transparent}
+html[data-theme=light] .cancelRec:hover{background:#e1787822;border-color:#e17878}
+html[data-theme=light] .recorderPanel .transport{background:#dedcdb;border-top:0;border-bottom:1px solid var(--m-line)}
+html[data-theme=light] .recorderPanel .camModeButton[aria-pressed=true]{background:#0a0a0a;color:#e4e5e9}
+html[data-theme=light] .recorderPanel .camModeButton[aria-pressed=true]:hover{background:#1b1d21!important;color:#e4e5e9!important}
+html[data-theme=light] body.modeCamera .recorderPanel{border:0}
+html[data-theme=light] #micProofName{color:#2a2d32}
+html[data-theme=light] #micProofSound{color:#696e79}
+html[data-theme=light] #micProofSound[data-ton=bon]{color:#008414}
+html[data-theme=light] #micProofSound[data-ton=moyen]{color:#613b00}
+html[data-theme=light] #micProofSound[data-ton=mauvais]{color:#e25a50}
+/* studio-verre.css */
+html[data-theme=light]{--texte:#1a1612;--doux:#1a1612b8;--pale:#1a161280;--filet:#0a0a0a24;--filetfort:#0a0a0a3d;--verre:#0a0a0a14;--verrefort:#0a0a0a24;--vert:#0e5500;--ambre:#704500;--corail:#c45a44;--sarcelle:#016459;--sable:#463b2d}
+html[data-theme=light] .workspaceTabs em{background:#0a0a0a40}
+html[data-theme=light] .a-planning{background:radial-gradient(70% 90% at 0 25%,#ff8e87 0,transparent 70%),radial-gradient(70% 70% at 100% 100%,#b2a176 0,transparent 75%),linear-gradient(160deg,#e8b1aa,#d6c9ca)}
+html[data-theme=light] .a-videos{background:radial-gradient(60% 45% at 80% 0,#d8bfb1 0,transparent 75%),linear-gradient(175deg,#dfdcda,#e8e7e6)}
+html[data-theme=light] .a-chantiers,html[data-theme=light] .a-publication{background:radial-gradient(60% 70% at 0 0,#73bab3 0,transparent 75%),linear-gradient(150deg,#96bcb8,#c5caca 62%,#d2d2d2)}
+html[data-theme=light] .a-accueil{background:radial-gradient(70% 70% at 90% 0,#ba9d69 0,transparent 72%),radial-gradient(50% 60% at 0 100%,#d4b5a1 0,transparent 75%),linear-gradient(165deg,#c8bdaf,#d9d5d2 75%)}
+html[data-theme=light] .a-stats,html[data-theme=light] .a-resultats{background:radial-gradient(65% 60% at 100% 0,#8bae8f 0,transparent 75%),linear-gradient(165deg,#bac7bb,#d6d9d6 72%)}
+html[data-theme=light] .a-script{background:radial-gradient(60% 50% at 20% 0,#c0b7b1 0,transparent 75%),linear-gradient(170deg,#d4d1cf,#e3e1e0 80%)}
+html[data-theme=light] .a-record,html[data-theme=light] .a-review{background:linear-gradient(170deg,#dedcdb,#e8e7e6)}
+html[data-theme=light][data-theme]{--bg:#e1dfde;--bg2:#0a0a0a12;--bg3:#0a0a0a1f;--hover:#0a0a0a29;--line:#0a0a0a24;--line2:#0a0a0a3d;--txt:#1a1612;--txt2:#1a1612b8;--dim:#1a161280;--accent:#1a1612;--muted:#1a161299;background:#e1dfde;& body{background:transparent};& aside{background:#f5f5f533;border-right:1px solid var(--line)};& .breadcrumb b{color:var(--txt)};& button,& .fileButton{background:#f5f5f52b;border-color:var(--line2)};& button:hover,& .fileButton:hover{background:var(--hover);border-color:var(--line2)};& button.accent,& .review .tools .sendReview,& .review .note .noteCopy{background:#1a1612e6;border-color:transparent;color:#dedcdb};& button.accent:hover,& .review .tools .sendReview:hover{background:#0a0a0a;border-color:transparent};& input,& textarea,& select{background:#f5f5f530;border-color:var(--line2)};& select option{background:#dcd9d7};& .card,& .publication,& .resultats,& .review,& .recorderPanel{background:var(--verre);border:1px solid var(--filet)};& .recorderPanel,& .review{--m-bg:#f5f5f500;--m-bar:#0a0a0a0a;--m-line:#0a0a0a24;--m-txt:#1a1612;--m-dim:#1a161299};& .workspaceTabs{background:#f5f5f52e;border:1px solid var(--filetFort)};& .workspaceTabs button{border:0;background:none;color:var(--doux)};& .workspaceTabs button:hover{background:none;color:var(--texte)};& .workspaceTabs button.active{background:var(--verreFort);color:var(--texte)};& .parcours{border:1px solid var(--filet);background:#f5f5f524};& .parcours button{background:none;border-right-color:var(--filet)};& .parcours button:hover{background:#0a0a0a14};& .parcours button.active{background:var(--verreFort);color:var(--texte)};& .parcours button.active::before{border-color:var(--filetFort);color:var(--texte)};& .parcours button.fait::before{background:var(--vert);border-color:var(--vert);color:#d3ded1};& .parcours button.active.fait::before{color:#d3ded1};& .parcours button.suivant::after{color:var(--ambre);border-color:#70450080};& .parcours button.active.suivant::after{color:var(--ambre);border-color:#70450080};& .settingsPopover,& .plusPop,& .clochePop,& dialog{background:#dcd9d7;border:1px solid var(--filetFort);color:var(--txt)};& dialog::backdrop{background:#f5f5f580}}
+html[data-theme=light] .vd{color:var(--texte);& button,& input,& select{color:inherit};& a{color:inherit;text-decoration:none};& .verre{background:var(--verre);border:1px solid var(--filet)};& .pilule{border:1px solid var(--filetFort);background:#f5f5f52b;color:var(--texte)};& .pilule:hover{background:var(--verreFort)};& .pilule.sel{background:#1a1612e6;color:#dedcdb;border-color:transparent};& .etiq{background:#0a0a0a26;color:var(--texte)};& .etiq.vert{background:#0e550030;color:#033800};& .etiq.ambre{background:#70450030;color:#4c2e00};& .etiq.corail{background:#c45a4433;color:#783424};& .etiq.sable{background:#463b2d26;color:#32291e};& .etiq i{background:currentColor};& .titreSec{color:var(--doux)};& .muet{color:var(--pale)};& .vVide{color:var(--doux)};& .filtres .compte{color:var(--doux)};& .ratio span{color:var(--doux)};& .trace{background:#0a0a0a2e};& .trace i{background:var(--texte)};& .outilsSuivi input,& .outilsSuivi select{background:#0a0a0a14;border:1px solid var(--filetFort)};& .outilsSuivi input::placeholder{color:var(--pale)};& .tableau{border:1px solid var(--filet);background:#0a0a0a08};& th{color:var(--doux);background:#e0dddb;border-bottom:1px solid var(--filetFort)};& td{border-bottom:1px solid #0a0a0a12};& tr.vLigne:hover td{background:#0a0a0a0a};& td.teinte{background:#d3a48733};& tr.vLigne:hover td.teinte{background:#d3a48752};& .groupeLigne td{background:#0a0a0a0f};& .vign,& .vignVide{background:#0a0a0a14};& .vignVide{border:1px solid var(--filet)};& .titreV{background:none;border:0};& .titreV:hover{background:none;text-decoration:underline};& .vReseau{border:1.5px solid #0a0a0a42};& .vReseau.pub{background:var(--vert);border-color:var(--vert);color:#d3ded1};& .vReseau.prevu{border-color:var(--ambre);color:var(--ambre)};& .vReseau.err{background:var(--corail);border-color:var(--corail);color:#f6ddd8};& .ouvrirLien:hover{text-decoration:underline};& .poste{border:1px solid var(--filet);background:#f5f5f526};& .poste i{background:var(--vert)};& .poste.eteint i{background:#0a0a0a47};& .poste span{color:var(--doux)};& .chantier{background:linear-gradient(120deg,#0a0a0a38,#0a0a0a14)};& .chantier:hover{background:linear-gradient(120deg,#0a0a0a47,#0a0a0a1f)};& .chantier img,& .chantier .place{background:#f5f5f557;color:var(--doux)};& .chNote{color:var(--doux)};& .chNote b{color:var(--texte)};& .etapes i{background:#0a0a0a2b};& .etapes i.passe{background:var(--texte)};& .etapes i.encours{background:var(--ambre)};& .rangee{border:0;border-bottom:1px solid var(--filet);background:none};& .rangee:last-child{border-bottom:0};& .rangee:hover{background:none};& .rangee:hover strong{text-decoration:underline};& .rangee span{color:var(--doux)};& .rangee .etiq{color:inherit}}
+html[data-theme=light] .vd .rangee .etiq.ambre{color:#4c2e00}
+html[data-theme=light] .vd .rangee .etiq.corail{color:#783424}
+html[data-theme=light] .vdBandeau{background:#f5f5f524;border:1px solid var(--filet)}
+html[data-theme=light] .vdBandeau .jauge i{background:#0a0a0a4d}
+html[data-theme=light] .vdBandeau .jauge .j-pub{background:var(--vert)}
+html[data-theme=light] .vdBandeau .jauge .j-mont{background:var(--ambre)}
+html[data-theme=light] .vdBandeau .jauge .j-tour{background:var(--corail)}
+html[data-theme=light] .vdBandeau .chiffres{color:var(--doux)}
+html[data-theme=light] .vdBandeau .chiffres b{color:var(--texte)}
+html[data-theme=light][data-theme] .review .reviewMain{background:#f5f5f524;color:var(--texte)}
+html[data-theme=light][data-theme] .reviewKeys{color:var(--doux)}
+html[data-theme=light][data-theme] .reviewKeys kbd{background:#0a0a0a1c;border-color:var(--filetFort);color:var(--texte)}
+html[data-theme=light][data-theme] select#takes{background:#0a0a0a14;border:1px solid var(--filetFort);color:var(--texte)}
+html[data-theme=light][data-theme] .versionBandeau{background:#70450024;border-color:#70450080;color:var(--texte)}
+html[data-theme=light][data-theme] .moisCase,html[data-theme=light][data-theme] .moisCase.weekend,html[data-theme=light][data-theme] .moisCase.hors,html[data-theme=light][data-theme] .moisCase.vide{background:color-mix(in srgb,var(--prog) calc(var(--n,0) * 4%),#f5f5f500)}
+html[data-theme=light][data-theme] .moisCase.weekend,html[data-theme=light][data-theme] .moisCase.hors,html[data-theme=light][data-theme] .moisCase.vide{background:color-mix(in srgb,var(--prog) calc(var(--n,0) * 4%),#f5f5f526)}
+html[data-theme=light][data-theme] .moisGrille{background:#0a0a0a1f}
+html[data-theme=light][data-theme] .planJour.passe{background:#f5f5f526}
+html[data-theme=light][data-theme] .reel.publie{background:#0a0a0a14}
+html[data-theme=light][data-theme] .reelCorps pre{color:var(--doux)}
+html[data-theme=light][data-theme] .reelCorps a{color:var(--texte)}
+html[data-theme=light][data-theme] .accPuce{background:#0a0a0a1c;border:1px solid var(--filetFort);color:var(--texte)}
+html[data-theme=light][data-theme] .versionBandeau .versionTexte{color:var(--texte)}
+html[data-theme=light][data-theme] .review .reviewMain{border-right:1px solid var(--filet)}
+html[data-theme=light][data-theme] .accJour .suiviEtape{background:none;color:var(--texte)}
+html[data-theme=light][data-theme] aside{background:#f5f5f542}
+@media(max-width:1100px){html[data-theme=light][data-theme] .review .reviewMain{border-right:0}}
+html[data-theme=light][data-theme] aside{background:#f5f5f55c}
+/* refonte.css */
+html[data-theme=light][data-theme]{--texte:#191712;--doux:#191712b5;--pale:#19171280;--filet:#0a0a0a1a;--filetfort:#0a0a0a2e;--verre:#0a0a0a0b;--verrefort:#0a0a0a17;--line:#0a0a0a1a;--line2:#0a0a0a2e;--bg2:#0a0a0a0b;--bg3:#0a0a0a12;--hover:#0a0a0a17;--plein:#191712;--surplein:#dedcdb;--pop:#dad7d6;--saisie:#0a0a0a0d;--fond:#e5e4e3;--mono:var(--police)}
+html[data-theme=light][data-theme] .stats{--s-instagram:#894d2a;--s-facebook:#7c6854;--s-tiktok:#185c48;--s-youtube:#704500;--neutre:#0a0a0a40}
+html[data-theme=light]{--mono:var(--police)}
+html[data-theme=light] .ambiance i{background:radial-gradient(70% 55% at 88% -8%,#d2c7be 0,transparent 72%),linear-gradient(172deg,#dddad8,#e5e4e3 78%)}
+html[data-theme=light] .statsOutils{--mono:var(--police)}
+html[data-theme=light][data-theme] header #status{color:var(--pale)}
+html[data-theme=light][data-theme] .workspaceTabs{background:var(--verre);border:1px solid var(--filet)}
+html[data-theme=light][data-theme] .workspaceTabs button.active{background:var(--verreFort)}
+html[data-theme=light][data-theme] .tabSep{background:var(--filet)}
+html[data-theme=light][data-theme] :is(#themeToggle,.cloche>summary){background:none;border:1px solid var(--filet);color:var(--doux)}
+html[data-theme=light][data-theme] :is(#themeToggle,.cloche>summary):hover{color:var(--texte);border-color:var(--filetFort);background:none}
+html[data-theme=light][data-theme] .vdBandeau{background:var(--verre)}
+html[data-theme=light][data-theme] :is(.card,.publication,.resultats,.review,.recorderPanel),html[data-theme=light] .vd .verre{background:var(--verre);border:1px solid var(--filet)}
+html[data-theme=light][data-theme] aside{background:#f5f5f538}
+html[data-theme=light][data-theme] aside .libraryLabel{color:var(--pale)}
+html[data-theme=light][data-theme] aside #new{background:var(--plein);border-color:transparent;color:var(--surPlein)}
+html[data-theme=light][data-theme] aside #new:hover{background:#0a0a0a}
+html[data-theme=light][data-theme] aside #chercher{background:var(--saisie);border-color:var(--filet)}
+@media(hover:hover) and (min-width:651px){html[data-theme=light][data-theme] .projectRow>.archiveBtn{background:var(--pop)}}
+html[data-theme=light][data-theme] .accLabel{color:var(--doux)}
+html[data-theme=light][data-theme] #accTodo{border:1px solid var(--filet);background:var(--verre)}
+html[data-theme=light][data-theme] .accTodo{border:0;border-bottom:1px solid var(--filet);background:none}
+html[data-theme=light][data-theme] .accTodo:last-child{border-bottom:0}
+html[data-theme=light][data-theme] .accNombre{color:var(--texte)}
+html[data-theme=light][data-theme] .accTodo:first-child button{background:var(--plein);border-color:transparent;color:var(--surPlein)}
+html[data-theme=light][data-theme] .accSemaine{border:1px solid var(--filet);background:var(--verre)}
+html[data-theme=light][data-theme] .accJour{border:0;border-bottom:1px solid var(--filet);background:none}
+html[data-theme=light][data-theme] .accJour:last-child{border-bottom:0}
+html[data-theme=light][data-theme] .accJour b{color:var(--doux)}
+html[data-theme=light][data-theme] .accJour.auj b{color:var(--texte)}
+html[data-theme=light][data-theme] .accSemaine+*{color:var(--pale)}
+html[data-theme=light][data-theme] .sujet .famille,html[data-theme=light][data-theme] .famille-story,html[data-theme=light][data-theme] .sujet .famille-story,html[data-theme=light][data-theme] .sujet :is(.famille-reproduction,.famille-actu,.famille-repo,.famille-skill){background:var(--verreFort);color:var(--doux)}
+html[data-theme=light][data-theme] .hooks :is(.hCarte,.hFormule){background:var(--verre);border-color:var(--filet)}
+html[data-theme=light][data-theme] .hooks .hFormule:hover,html[data-theme=light][data-theme] .hooks .hFormule.sel{background:var(--verreFort)}
+html[data-theme=light][data-theme] .hooks :is(.hMeta strong,.hFormule b span){color:var(--texte)}
+html[data-theme=light][data-theme] .hooks .hBarre.g i u{background:var(--texte)}
+html[data-theme=light][data-theme] .hooks .hMeta .pub{background:var(--verreFort);color:var(--doux)}
+html[data-theme=light] .vd td.teinte,html[data-theme=light] .vd tr.vLigne:hover td.teinte{background:none}
+html[data-theme=light][data-theme] .vd tr.vLigne:hover td.teinte{background:#0a0a0a0a}
+html[data-theme=light][data-theme] .vd th{background:#dfdcda}
+html[data-theme=light][data-theme] .cycleBar{border:1px solid var(--filet);background:var(--pop)}
+html[data-theme=light][data-theme] #parcours{background:var(--pop);border-color:var(--filet)}
+html[data-theme=light][data-theme] #copyStart{background:none;border-color:var(--filetFort);color:var(--texte)}
+html[data-theme=light][data-theme] #copyStart:hover{background:var(--hover)}
+html[data-theme=light][data-theme] .hookScore:has(>.hsTete:only-child)::after{color:var(--pale)}
+html[data-theme=light][data-theme] .pubAction{border:1px solid var(--filet);background:var(--verre)}
+html[data-theme=light][data-theme] .hookScene{border-left:1px solid var(--filet)}
+html[data-theme=light][data-theme] .hookScene .hookEtiq{color:var(--pale)}
+html[data-theme=light][data-theme] .reel{background:var(--verre);border-color:var(--filet)}
+html[data-theme=light][data-theme] .reel.aVenir{border-color:var(--filet)}
+html[data-theme=light][data-theme] .vIdee.prete,html[data-theme=light][data-theme] .vIdee{background:var(--verre);border-color:var(--filet)}
+html[data-theme=light][data-theme] .vIdee:hover{background:var(--verreFort)}
+html[data-theme=light][data-theme] .statsTuiles{border:1px solid var(--filet);background:var(--verre)}
+html[data-theme=light][data-theme] .statsTuile{border:0;border-right:1px solid var(--filet);background:none}
+html[data-theme=light][data-theme] .statsTuile:last-child{border-right:0}
+html[data-theme=light][data-theme] .statsTuile.on{background:var(--verreFort);border-color:var(--filet);outline:0}
+html[data-theme=light][data-theme] .hooks :has(>.hFormule){border:1px solid var(--filet);background:var(--verre)}
+html[data-theme=light][data-theme] .hooks .hFormule{border:0;border-right:1px solid var(--filet);border-bottom:1px solid var(--filet);background:none}
+html[data-theme=light][data-theme] .reelStatut,html[data-theme=light][data-theme] .reel.large .reelStatut{background:none;color:var(--pale)}
+html[data-theme=light][data-theme] .reelStatut.publie{color:var(--doux)}
+html[data-theme=light][data-theme] .reel.alerte .reelStatut{color:#763939}
+@media(max-width:650px){html[data-theme=light][data-theme] #projects .projectRow{border:1px solid var(--filet)}}
+html[data-theme=light][data-theme] :not(.accJour)>.suivi-programme{background:#875600;color:#dedcdb}
+
+/* Finitions écrites à la main : surfaces blanches sur fond crème, palette sans bleu. */
+html[data-theme=light][data-theme][data-theme]{--texte:#1c1a18;--doux:#1c1a18b8;--pale:#1c1a1880;--filet:#1c1a1816;--filetFort:#1c1a1829;--verre:#fff;--verreFort:#1c1a180d;--line:#1c1a1816;--line2:#1c1a1829;--bg2:#fff;--bg3:#1c1a180a;--hover:#1c1a180d;--plein:#1c1a18;--surPlein:#fff;--pop:#fff;--saisie:#fff;--fond:#f7f5f1;--bg:#f7f5f1;--txt:#1c1a18;--txt2:#1c1a18b8;--dim:#1c1a1880;--muted:#1c1a1899;--accent:#1c1a18;background:#f7f5f1}
+html[data-theme=light][data-theme][data-theme] body{background:#f7f5f1}
+html[data-theme=light][data-theme][data-theme] .stats{--s-instagram:#c96f3e;--s-facebook:#8d7660;--s-tiktok:#2f9a80;--s-youtube:#c98f1e;--neutre:#1c1a1840}
+html[data-theme=light][data-theme][data-theme] aside{background:#fff;border-right:1px solid var(--filet)}
+html[data-theme=light][data-theme][data-theme] .vd th{background:#fff}
+html[data-theme=light][data-theme][data-theme] .reel.alerte .reelStatut{color:#b3261e}
+html[data-theme=light][data-theme][data-theme]{--vert:#2f7d4f;--ambre:#a8761c;--corail:#c4503a;--sarcelle:#2f9a80;--sable:#8d7660}
+html[data-theme=light][data-theme][data-theme] .tableau{background:#fff;border:1px solid var(--filet)}
+html[data-theme=light][data-theme][data-theme] .vd tr.groupeLigne td{background:#1c1a1808}
+html[data-theme=light][data-theme][data-theme] .vBanque{background:#1c1a1806;border:1px solid var(--filet)}
+html[data-theme=light][data-theme][data-theme] .vd :is(input,select):not([type=checkbox]){background-color:#fff;border:1px solid var(--filetFort);color:var(--texte)}
+html[data-theme=light][data-theme][data-theme] .vd .etiq[style*="--pil"]{color:color-mix(in srgb,var(--pil) 58%,#1c1a18)!important;background:color-mix(in srgb,var(--pil) 15%,#fff)}
+html[data-theme=light][data-theme][data-theme] .suiviPanel{background:#fff;border:1px solid var(--filet)}
+html[data-theme=light][data-theme][data-theme] :not(.accJour)>.suiviEtape{background:var(--verreFort);color:var(--texte)}
+html[data-theme=light][data-theme][data-theme] .suiviTitre{background:none}
+html[data-theme=light][data-theme][data-theme] .suiviReseau.suivi-programme{background:#d9a441;color:#1c1a18}
+html[data-theme=light][data-theme][data-theme] :is(.settingsPopover,.plusPop,.clochePop,dialog),html[data-theme=light][data-theme][data-theme] .recorderPanel .settingsPopover{background:#fff;border:1px solid var(--filet);color:var(--texte);box-shadow:0 12px 40px #1c1a1826}
+html[data-theme=light][data-theme][data-theme] .cycleBar{box-shadow:0 12px 0 var(--fond),0 -6px 18px #1c1a1812}
+html[data-theme=light][data-theme][data-theme] .recorderPanel .transport{background:#fff;border-bottom:1px solid var(--filet)}
+html[data-theme=light][data-theme][data-theme] .recorderPanel .transport select{background-color:#fff;border-color:var(--filetFort)}
+html[data-theme=light][data-theme][data-theme] #stage{background:#f7f5f1}
+html[data-theme=light][data-theme][data-theme] #cue,html[data-theme=light][data-theme][data-theme] #stage:fullscreen #cue{background:#fffffff2;border:1px solid var(--filet);box-shadow:0 8px 30px #1c1a1814}
+html[data-theme=light][data-theme][data-theme] #cameraHint{background:none}
+html[data-theme=light][data-theme][data-theme] #cameraHint strong{color:var(--texte)}
+html[data-theme=light][data-theme][data-theme] #cameraHint button:not(.hintPrimary){background:#fff;border:1px solid var(--filetFort);color:var(--texte)}

@@ -88,7 +88,7 @@ function rendre() {
     cases.push(c);
   }
   $('accSemaine').replaceChildren(...cases);
-  $('accTrous').textContent = vides.length ? `Rien de prévu ${vides.length > 1 ? vides.slice(0, -1).join(', ') + ' et ' + vides.at(-1) : vides[0]}.` : 'Chaque jour restant a sa vidéo.';
+  $('accTrous').textContent = vides.length === 7 ? 'Rien de prévu cette semaine.' : vides.length ? `Rien de prévu ${vides.length > 1 ? vides.slice(0, -1).join(', ') + ' et ' + vides.at(-1) : vides[0]}.` : 'Chaque jour restant a sa vidéo.';
 }
 
 document.addEventListener('suivi:maj', rendre);
