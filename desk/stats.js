@@ -1,4 +1,5 @@
 import {config} from './config.js';
+import {zernioAbsent} from './zernio-absent.js';
 // Onglet « Statistiques » : uniquement les reels programmés depuis le studio, et leur évolution jour par jour (Zernio).
 const $ = s => document.getElementById(s);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -288,12 +289,14 @@ function rendre() {
   const box = $('statsContenu');
   observateurs.splice(0).forEach(o => o.disconnect());
   if (!donnees) return;
+  document.querySelector('.stats').classList.toggle('sansZernio', !!donnees.inactif);
+  if (donnees.inactif) { box.replaceChildren(zernioAbsent('Les statistiques s’affichent dès que Zernio est connecté.')); return; }
   const publies = donnees.reels.filter(r => r.statut !== 'programmé' && r.serie.length);
   if (!choisi || !publies.some(r => r.projet === choisi)) choisi = [...publies].sort((a, b) => b.total.vues - a.total.vues)[0]?.projet || null;
   const enfants = [];
   const erreurs = Object.keys(donnees.erreurs || {}).length, anciens = donnees.reels.filter(r => r.ancien).length;
   if (erreurs || anciens) enfants.push(el('div', 'statsAlerte', `${erreurs ? `${erreurs} reel${erreurs > 1 ? 's' : ''} sans réponse de Zernio. ` : ''}${anciens ? `${anciens} affiché${anciens > 1 ? 's' : ''} avec la dernière lecture enregistrée.` : ''}`));
-  if (!donnees.reels.length) { box.replaceChildren(el('p', 'muted', donnees.inactif ? 'Les statistiques s’activent quand Zernio est connecté. Les étapes sont dans le README.' : 'Aucun reel programmé depuis le studio pour l’instant.')); return; }
+  if (!donnees.reels.length) { box.replaceChildren(el('p', 'muted', 'Aucun reel programmé depuis le studio pour l’instant.')); return; }
   enfants.push(tuiles(publies));
   const duo = el('div', 'statsDuo'); duo.append(global(publies), trajectoires(publies)); enfants.push(duo);
   const sel = publies.find(r => r.projet === choisi);
@@ -312,8 +315,8 @@ export async function chargerStats(frais = false) {
     if (d.error) throw Error(d.error);
     donnees = d;
     const n = d.reels.filter(r => r.statut !== 'programmé').length, p = d.reels.length - n;
-    $('statsMaj').textContent = d.inactif ? 'zernio non connecté' : `${n} publié${n > 1 ? 's' : ''} · ${p} programmé${p > 1 ? 's' : ''} · zernio ${new Date(d.maj).toLocaleTimeString('fr-FR', {timeZone: TZ})}`;
-    $('statsVoyant').className = 'statsVoyant' + (d.inactif ? ' off' : Object.keys(d.erreurs || {}).length || d.reels.some(r => r.ancien) ? ' ancien' : '');
+    $('statsMaj').textContent = `${n} publié${n > 1 ? 's' : ''} · ${p} programmé${p > 1 ? 's' : ''} · zernio ${new Date(d.maj).toLocaleTimeString('fr-FR', {timeZone: TZ})}`;
+    $('statsVoyant').className = 'statsVoyant' + (Object.keys(d.erreurs || {}).length || d.reels.some(r => r.ancien) ? ' ancien' : '');
     rendre();
   }).catch(e => { $('statsMaj').textContent = e.message; $('statsVoyant').className = 'statsVoyant panne'; if (!donnees) $('statsContenu').replaceChildren(el('p', 'muted', `Statistiques indisponibles : ${e.message}`)); }).finally(() => { charge = null; });
   return charge;

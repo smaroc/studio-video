@@ -174,6 +174,15 @@ html[data-theme] :not(.accJour)>.suivi-programme{background:#d9a441;color:#1c1a1
 /* Accueil sans tâche : le message respire dans son panneau. */
 html[data-theme] #accTodo>p{margin:0;padding:14px 16px}
 
-/* Zernio absent : voyant neutre, ni vert ni rouge. */
-html[data-theme] .sourceChip.off::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--pale);margin-right:6px}
-html[data-theme] .statsVoyant.off{background:var(--pale);box-shadow:none}
+/* Zernio absent : un seul panneau à la place des réglages et de la grille. */
+html[data-theme] :is(.planning,.stats).sansZernio>.statsOutils{display:none}
+html[data-theme] .zernioAbsent{max-width:640px;border:1px solid var(--filet);border-radius:18px;background:var(--verre);overflow:hidden}
+html[data-theme] .zernioTete{padding:18px 20px;border-bottom:1px solid var(--filet)}
+html[data-theme] .zernioTete h3{margin:0 0 4px;font-size:16px;font-weight:600}
+html[data-theme] .zernioTete p{margin:0;font-size:13px}
+html[data-theme] .zernioEtapes{margin:0;padding:16px 20px 18px 38px;font-size:13px;line-height:1.7}
+html[data-theme] .zernioEtapes a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+html[data-theme] .zernioEtapes code{padding:1px 6px;border-radius:6px;background:var(--filet);font-size:12px;overflow-wrap:anywhere}
+
+/* Tant qu'un projet n'a pas de script, l'écriture passe avant la caméra. */
+@media(min-width:1181px){html[data-theme] .grid.scriptVide:not(.recordMode){grid-template-columns:minmax(0,1fr) minmax(600px,1.1fr)}}

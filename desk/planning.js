@@ -1,4 +1,5 @@
 import {config} from './config.js';
+import {zernioAbsent} from './zernio-absent.js';
 // Onglet « Planning » : uniquement les vidéos programmées ou publiées, une carte par reel avec les réseaux où il est validé.
 const $ = s => document.getElementById(s);
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -257,13 +258,14 @@ function afficher() {
   document.querySelectorAll('[data-vue]').forEach(b => { b.classList.toggle('on', b.dataset.vue === vue); b.setAttribute('aria-selected', String(b.dataset.vue === vue)); });
   $('planningSemaine').textContent = libelle();
   if (!donnees) return;
+  document.querySelector('.planning').classList.toggle('sansZernio', !!donnees.inactif);
+  if (donnees.inactif) { $('planningContenu').replaceChildren(zernioAbsent('Le planning se remplit dès que Zernio est connecté.')); return; }
   const groupes = reels(donnees.items);
   const sources = el('div', 'planSources');
   for (const [k, nom] of [['zernio', 'Zernio']]) {
-    const err = donnees.erreurs[k], chip = el('span', `sourceChip ${donnees.inactif ? 'off' : err ? 'ko' : 'ok'}`, donnees.inactif ? `${nom} non connecté` : nom);
-    chip.title = donnees.inactif ? 'clé d’API absente' : err || 'à jour';
+    const err = donnees.erreurs[k], chip = el('span', `sourceChip ${err ? 'ko' : 'ok'}`, nom);
+    chip.title = err || 'à jour';
     sources.append(chip);
-    if (donnees.inactif) sources.append(el('span', 'muted', 'La programmation et le planning s’activent quand Zernio est connecté. Les étapes sont dans le README.'));
     if (err) sources.append(el('span', 'muted', err));
   }
   const corps = vue === 'jour' ? vueJour(groupes) : vue === 'mois' ? vueMois(groupes) : vueSemaine(groupes);
@@ -288,7 +290,7 @@ export async function chargerPlanning(frais = false) {
     const r = await fetch(`/api/planning${frais ? '?frais=1' : ''}`);
     if (!r.ok) throw Error((await r.json()).error || r.statusText);
     donnees = await r.json();
-    $('planningMaj').textContent = donnees.inactif ? 'zernio non connecté' : `zernio · maj ${heure(donnees.maj)}`;
+    $('planningMaj').textContent = `zernio · maj ${heure(donnees.maj)}`;
     afficher();
   } catch (e) { $('planningMaj').textContent = ''; $('planningContenu').replaceChildren(el('p', 'muted', `Erreur : ${e.message}`)); }
 }
