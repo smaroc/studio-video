@@ -46,6 +46,8 @@ function rendre() {
   if (aMonter.length) { const age = jours(new Date(aMonter[0].dernierePrise || aMonter[0].cree)); todo.push(carte(aMonter.length, 'monter', aMonter.length > 1 ? 'Vidéos tournées, pas montées' : 'Vidéo tournée, pas montée', age > 1 ? `la plus ancienne attend depuis ${age} jours` : noms(aMonter), 'Voir', () => ouvrir(aMonter[0].id, 'review'))); }
   const aTourner = items.filter(x => x.etape === 'à tourner' && x.script);
   if (aTourner.length) todo.push(carte(aTourner.length, 'tourner', aTourner.length > 1 ? 'Scripts prêts à tourner' : 'Script prêt à tourner', noms(aTourner), 'Tourner', () => ouvrir(aTourner[0].id, 'record')));
+  const aEcrire = items.filter(x => x.etape === 'à tourner' && !x.script);
+  if (aEcrire.length) todo.push(carte(aEcrire.length, 'tourner', aEcrire.length > 1 ? 'Scripts à écrire' : 'Script à écrire', noms(aEcrire), 'Écrire', () => ouvrir(aEcrire[0].id, 'script')));
   // Reels au-dessus de deux fois la médiane sur les 30 derniers jours : candidats à une suite ou à une pub.
   const st = window.statsVideos, forts = st?.mediane ? Object.entries(st.par).filter(([, r]) => r.vues >= 2 * st.mediane && Date.now() - new Date(r.date) < 30 * 864e5).sort((a, b) => b[1].vues - a[1].vues) : [];
   if (forts.length) {
@@ -53,7 +55,7 @@ function rendre() {
     const c = carte(forts.length, 'publie', forts.length > 1 ? 'Reels à relancer' : 'Reel à relancer', forts.slice(0, 3).map(([id, r]) => `${titre(id).slice(0, 34)}${titre(id).length > 34 ? '…' : ''} (${(r.vues / st.mediane).toLocaleString('fr-FR', {maximumFractionDigits: 1})} ×)`).join(' · ') + ' : une suite ou une pub', 'Voir', () => ouvrir(forts[0][0], 'resultats'));
     todo.push(c);
   }
-  $('accTodo').replaceChildren(...(todo.length ? todo : [el('p', 'muted', 'Rien en attente. Tout est programmé.')]));
+  $('accTodo').replaceChildren(...(todo.length ? todo : [el('p', 'muted', items.length ? 'Rien en attente. Tout est programmé.' : 'Aucune vidéo pour l’instant. Crée un projet pour commencer.')]));
 
   // Semaine du lundi au dimanche, heure locale du studio.
   const auj = new Date(jourLocal(Date.now()) + 'T12:00'), lundi = new Date(auj); lundi.setDate(auj.getDate() - (auj.getDay() + 6) % 7);

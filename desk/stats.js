@@ -293,7 +293,7 @@ function rendre() {
   const enfants = [];
   const erreurs = Object.keys(donnees.erreurs || {}).length, anciens = donnees.reels.filter(r => r.ancien).length;
   if (erreurs || anciens) enfants.push(el('div', 'statsAlerte', `${erreurs ? `${erreurs} reel${erreurs > 1 ? 's' : ''} sans réponse de Zernio. ` : ''}${anciens ? `${anciens} affiché${anciens > 1 ? 's' : ''} avec la dernière lecture enregistrée.` : ''}`));
-  if (!donnees.reels.length) { box.replaceChildren(el('p', 'muted', 'Aucun reel programmé depuis le studio pour l’instant.')); return; }
+  if (!donnees.reels.length) { box.replaceChildren(el('p', 'muted', donnees.inactif ? 'Les statistiques s’activent quand Zernio est connecté. Les étapes sont dans le README.' : 'Aucun reel programmé depuis le studio pour l’instant.')); return; }
   enfants.push(tuiles(publies));
   const duo = el('div', 'statsDuo'); duo.append(global(publies), trajectoires(publies)); enfants.push(duo);
   const sel = publies.find(r => r.projet === choisi);
@@ -312,8 +312,8 @@ export async function chargerStats(frais = false) {
     if (d.error) throw Error(d.error);
     donnees = d;
     const n = d.reels.filter(r => r.statut !== 'programmé').length, p = d.reels.length - n;
-    $('statsMaj').textContent = `${n} publié${n > 1 ? 's' : ''} · ${p} programmé${p > 1 ? 's' : ''} · zernio ${new Date(d.maj).toLocaleTimeString('fr-FR', {timeZone: TZ})}`;
-    $('statsVoyant').className = 'statsVoyant' + (Object.keys(d.erreurs || {}).length || d.reels.some(r => r.ancien) ? ' ancien' : '');
+    $('statsMaj').textContent = d.inactif ? 'zernio non connecté' : `${n} publié${n > 1 ? 's' : ''} · ${p} programmé${p > 1 ? 's' : ''} · zernio ${new Date(d.maj).toLocaleTimeString('fr-FR', {timeZone: TZ})}`;
+    $('statsVoyant').className = 'statsVoyant' + (d.inactif ? ' off' : Object.keys(d.erreurs || {}).length || d.reels.some(r => r.ancien) ? ' ancien' : '');
     rendre();
   }).catch(e => { $('statsMaj').textContent = e.message; $('statsVoyant').className = 'statsVoyant panne'; if (!donnees) $('statsContenu').replaceChildren(el('p', 'muted', `Statistiques indisponibles : ${e.message}`)); }).finally(() => { charge = null; });
   return charge;

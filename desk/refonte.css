@@ -173,3 +173,7 @@ html[data-theme] :not(.accJour)>.suivi-programme{background:#d9a441;color:#1c1a1
 
 /* Accueil sans tâche : le message respire dans son panneau. */
 html[data-theme] #accTodo>p{margin:0;padding:14px 16px}
+
+/* Zernio absent : voyant neutre, ni vert ni rouge. */
+html[data-theme] .sourceChip.off::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--pale);margin-right:6px}
+html[data-theme] .statsVoyant.off{background:var(--pale);box-shadow:none}

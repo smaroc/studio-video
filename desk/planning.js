@@ -260,9 +260,10 @@ function afficher() {
   const groupes = reels(donnees.items);
   const sources = el('div', 'planSources');
   for (const [k, nom] of [['zernio', 'Zernio']]) {
-    const err = donnees.erreurs[k], chip = el('span', `sourceChip ${err ? 'ko' : 'ok'}`, nom);
-    chip.title = err || 'à jour';
+    const err = donnees.erreurs[k], chip = el('span', `sourceChip ${donnees.inactif ? 'off' : err ? 'ko' : 'ok'}`, donnees.inactif ? `${nom} non connecté` : nom);
+    chip.title = donnees.inactif ? 'clé d’API absente' : err || 'à jour';
     sources.append(chip);
+    if (donnees.inactif) sources.append(el('span', 'muted', 'La programmation et le planning s’activent quand Zernio est connecté. Les étapes sont dans le README.'));
     if (err) sources.append(el('span', 'muted', err));
   }
   const corps = vue === 'jour' ? vueJour(groupes) : vue === 'mois' ? vueMois(groupes) : vueSemaine(groupes);
@@ -287,7 +288,7 @@ export async function chargerPlanning(frais = false) {
     const r = await fetch(`/api/planning${frais ? '?frais=1' : ''}`);
     if (!r.ok) throw Error((await r.json()).error || r.statusText);
     donnees = await r.json();
-    $('planningMaj').textContent = `zernio · maj ${heure(donnees.maj)}`;
+    $('planningMaj').textContent = donnees.inactif ? 'zernio non connecté' : `zernio · maj ${heure(donnees.maj)}`;
     afficher();
   } catch (e) { $('planningMaj').textContent = ''; $('planningContenu').replaceChildren(el('p', 'muted', `Erreur : ${e.message}`)); }
 }

@@ -785,6 +785,8 @@ html[data-theme=light][data-theme] .reelStatut.publie{color:var(--doux)}
 html[data-theme=light][data-theme] .reel.alerte .reelStatut{color:#763939}
 @media(max-width:650px){html[data-theme=light][data-theme] #projects .projectRow{border:1px solid var(--filet)}}
 html[data-theme=light][data-theme] :not(.accJour)>.suivi-programme{background:#875600;color:#dedcdb}
+html[data-theme=light][data-theme] .sourceChip.off::before{background:var(--pale)}
+html[data-theme=light][data-theme] .statsVoyant.off{background:var(--pale)}
 
 /* Finitions écrites à la main : surfaces blanches sur fond crème, palette sans bleu. */
 html[data-theme=light][data-theme][data-theme]{--texte:#1c1a18;--doux:#1c1a18b8;--pale:#1c1a1880;--filet:#1c1a1816;--filetFort:#1c1a1829;--verre:#fff;--verreFort:#1c1a180d;--line:#1c1a1816;--line2:#1c1a1829;--bg2:#fff;--bg3:#1c1a180a;--hover:#1c1a180d;--plein:#1c1a18;--surPlein:#fff;--pop:#fff;--saisie:#fff;--fond:#f7f5f1;--bg:#f7f5f1;--txt:#1c1a18;--txt2:#1c1a18b8;--dim:#1c1a1880;--muted:#1c1a1899;--accent:#1c1a18;background:#f7f5f1}
