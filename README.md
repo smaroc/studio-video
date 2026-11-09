@@ -16,19 +16,15 @@ L'interface est en français. Le studio n'a été testé que sur macOS : Linux d
 
 ## Démarrage
 
-Il faut Node 20 ou plus, ffmpeg, Python 3 et Chrome. Ensuite, avec la clé reçue dans ton mail d'achat :
+Il faut Node 20 ou plus, ffmpeg, Python 3 et Chrome. Ensuite :
 
 ```bash
-curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash -s <ta clé>
+curl -fsSL https://raw.githubusercontent.com/smaroc/studio-video/main/installer.sh | bash
 ```
 
 Ouvre `~/studio-video` dans ton agent et tape `/installation-studio` : il vérifie les outils et t'aide à créer ta voix, ton style et ta config.
 
-Pour récupérer la dernière version plus tard, sans perdre tes vidéos ni tes réglages :
-
-```bash
-curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash
-```
+Pour récupérer la dernière version plus tard, sans perdre tes vidéos ni tes réglages, relance la même ligne.
 
 Si tu préfères tout faire à la main, depuis `~/studio-video` :
 

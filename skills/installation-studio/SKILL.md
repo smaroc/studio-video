@@ -5,26 +5,26 @@ description: Installe, met à jour et personnalise le studio vidéo : téléchar
 
 # Installation
 
-Avance une étape à la fois, à partir de la racine du studio. Saute ce qui est déjà en place. Ne demande jamais à l'utilisateur de coller une clé d'un service tiers dans la conversation. La seule exception est sa clé d'accès au studio (étape 0), qui ne sert qu'au téléchargement.
+Avance une étape à la fois, à partir de la racine du studio. Saute ce qui est déjà en place. Ne demande jamais à l'utilisateur de coller une clé d'un service tiers dans la conversation.
 
 ## 0. Récupérer le studio
 
 Le studio est là si le dossier courant, ou `~/studio-video`, contient `desk/server.mjs`. Dans ce cas, place-toi dedans et passe à l'étape 1.
 
-Sinon, demande la clé d'accès reçue dans le mail d'achat, puis lance :
+Sinon, lance directement cette ligne, sans rien demander à l'utilisateur :
 
 ```bash
-curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash -s <clé>
+curl -fsSL https://raw.githubusercontent.com/smaroc/studio-video/main/installer.sh | bash
 ```
 
-Place-toi ensuite dans `~/studio-video` et continue. La clé est gardée sur la machine, il n'y aura plus à la donner. Si elle est refusée, demande à l'utilisateur de vérifier son mail d'achat et de contacter le support s'il ne la trouve pas.
+Place-toi ensuite dans `~/studio-video` et continue.
 
 ## Mettre à jour
 
-Quand l'utilisateur demande une mise à jour, lance cette ligne, sans clé :
+Quand l'utilisateur demande une mise à jour, relance la même ligne :
 
 ```bash
-curl -fsSL https://go.sophieneia.com/studio/installer.sh | bash
+curl -fsSL https://raw.githubusercontent.com/smaroc/studio-video/main/installer.sh | bash
 ```
 
 La mise à jour ne touche jamais aux prises, aux projets, à `studio.config.json` ni à `voice.md`, et ne remplace aucun fichier modifié par l'utilisateur. Pour chaque fichier gardé, la version neuve est posée dans `.studio/nouveautes/` : compare les deux, propose la fusion, applique-la seulement avec son accord, puis supprime la copie. Relance `cd moteur && npm install` si `moteur/package.json` a changé, puis le serveur du studio.
